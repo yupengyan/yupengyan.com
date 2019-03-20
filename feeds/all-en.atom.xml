@@ -535,7 +535,149 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 &lt;/table&gt;
 &lt;p&gt;参考：
 http://www.w3school.com.cn/cssref/css_selectors.&lt;span class="caps"&gt;ASP&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>Git handbook:using Git in a team</title><link href="https://yupengyan.com/git-handbookusing-git-in-a-team" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/git-handbookusing-git-in-a-team</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>github quick start</title><link href="https://yupengyan.com/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
+Get started by creating a new file or uploading an existing file. 
+We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
+Get started by creating a new file or uploading an existing file. 
+We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy&amp;quot; &amp;gt;&amp;gt; README.md
+git init
+git add README.md
+git commit -m &amp;quot;first commit&amp;quot;
+git remote add origin https://github.com/yupengyan/ve3_scrapy.git
+git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;or push an existing repository from the command&amp;nbsp;line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://github.com/yupengyan/ve3_scrapy.git
+git push -u origin master
+or 
+git push -u origin --all
+or 
+git push -u origin --tags
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>math for AI</title><link href="https://yupengyan.com/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第1章 高等数学&lt;br /&gt;
+1.1 导数和偏导数&lt;br /&gt;
+1.2 梯度向量  &lt;br /&gt;
+1.3 极值定理 &lt;br /&gt;
+1.4 Jacobbi矩阵 &lt;br /&gt;
+1.5 Hessian矩阵 &lt;br /&gt;
+1.6 泰勒展开公式 &lt;br /&gt;
+1.7 拉格朗日乘数法 &lt;br /&gt;
+第2章 线性代数 &lt;br /&gt;
+2.1 向量及其运算 &lt;br /&gt;
+2.2 范数 &lt;br /&gt;
+2.3 矩阵及其运算 &lt;br /&gt;
+2.4 逆矩阵 &lt;br /&gt;
+2.5 二次型 &lt;br /&gt;
+2.6 矩阵的正定性 &lt;br /&gt;
+2.7 矩阵的特征值与特征向量 &lt;br /&gt;
+2.8 矩阵的奇异值分解 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第1章 高等数学&lt;br /&gt;
+1.1 导数和偏导数&lt;br /&gt;
+1.2 梯度向量  &lt;br /&gt;
+1.3 极值定理 &lt;br /&gt;
+1.4 Jacobbi矩阵 &lt;br /&gt;
+1.5 Hessian矩阵 &lt;br /&gt;
+1.6 泰勒展开公式 &lt;br /&gt;
+1.7 拉格朗日乘数法 &lt;br /&gt;
+第2章 线性代数 &lt;br /&gt;
+2.1 向量及其运算 &lt;br /&gt;
+2.2 范数 &lt;br /&gt;
+2.3 矩阵及其运算 &lt;br /&gt;
+2.4 逆矩阵 &lt;br /&gt;
+2.5 二次型 &lt;br /&gt;
+2.6 矩阵的正定性 &lt;br /&gt;
+2.7 矩阵的特征值与特征向量 &lt;br /&gt;
+2.8 矩阵的奇异值分解 &lt;br /&gt;
+第3章 概率论 &lt;br /&gt;
+3.1 概率、随机事件和随机变量 &lt;br /&gt;
+3.2 条件概率与贝叶斯公式  &lt;br /&gt;
+3.3 常用的概率分布 &lt;br /&gt;
+3.4 随机变量的均值和方差、协方差 &lt;br /&gt;
+3.5 最大似然估计 &lt;br /&gt;
+第4章 最优化 &lt;br /&gt;
+4.1 凸集、凸函数 &lt;br /&gt;
+4.2 凸优化问题的标准形式 &lt;br /&gt;
+4.3&amp;nbsp;线性规划问题   &lt;/p&gt;
+&lt;h2 id="_1"&gt;优化论初步&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  优化迭代法统一论 &lt;br /&gt;
+1.0  本微专业概述 &lt;br /&gt;
+1.1  线性回归建模 &lt;br /&gt;
+1.2  无约束优化梯度分析法（上） &lt;br /&gt;
+1.3  无约束优化梯度分析法（下） &lt;br /&gt;
+1.4  无约束迭代法 &lt;br /&gt;
+1.5  线性回归求解 &lt;br /&gt;
+1.6&amp;nbsp;案例分析    &lt;/p&gt;
+&lt;p&gt;第二章  深度学习反向传播 &lt;br /&gt;
+2.1  回归与分类、神经网络 &lt;br /&gt;
+2.2  BP算法（上） &lt;br /&gt;
+2.3  BP算法（下） &lt;br /&gt;
+2.4&amp;nbsp;计算图   &lt;/p&gt;
+&lt;h2 id="_2"&gt;优化论进阶&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  凸优化基础 &lt;br /&gt;
+1.1  一般优化问题 &lt;br /&gt;
+1.2  凸集和凸函数基础（上） &lt;br /&gt;
+1.3  凸集和凸函数基础（下） &lt;br /&gt;
+1.4  凸优化问题  &lt;br /&gt;
+1.5&amp;nbsp;案例分析   &lt;/p&gt;
+&lt;p&gt;第二章  凸优化进阶之对偶理论 &lt;br /&gt;
+2.1  凸优化问题 &lt;br /&gt;
+2.2  对偶（上） &lt;br /&gt;
+2.3  对偶（下） &lt;br /&gt;
+2.4&amp;nbsp;问题案例   &lt;/p&gt;
+&lt;p&gt;第三章  &lt;span class="caps"&gt;SVM&lt;/span&gt; &lt;br /&gt;
+3.1  问题案例 &lt;br /&gt;
+3.2  &lt;span class="caps"&gt;SVM&lt;/span&gt; 建模 &lt;br /&gt;
+3.3  &lt;span class="caps"&gt;SVM&lt;/span&gt; 求解 &lt;br /&gt;
+3.4  &lt;span class="caps"&gt;SVM&lt;/span&gt;&amp;nbsp;扩展，附案例   &lt;/p&gt;
+&lt;h2 id="_3"&gt;数据降维的艺术&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  矩阵分析上篇  &lt;br /&gt;
+1.1  矩阵与张量 &lt;br /&gt;
+1.2  可逆矩阵 &lt;br /&gt;
+1.3  线性相关 &lt;br /&gt;
+1.4  子空间 &lt;br /&gt;
+1.5  范数 &lt;br /&gt;
+1.6 特殊矩阵和特征分解 &lt;br /&gt;
+案例：&lt;span class="caps"&gt;PCA&lt;/span&gt;&amp;nbsp;数据降维   &lt;/p&gt;
+&lt;p&gt;第二章  矩阵分析下篇  &lt;br /&gt;
+2.1  &lt;span class="caps"&gt;SVD&lt;/span&gt; &lt;br /&gt;
+2.2  &lt;span class="caps"&gt;SVD&lt;/span&gt; 与特征分解关系 &lt;br /&gt;
+2.3  图像压缩 &lt;br /&gt;
+2.4  伪逆 &lt;br /&gt;
+2.5  迹与行列式 &lt;br /&gt;
+案例：&lt;span class="caps"&gt;SVD&lt;/span&gt;&amp;nbsp;对图像进行压缩   &lt;/p&gt;
+&lt;h2 id="_4"&gt;统计推断的魅力&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  概率统计上篇  &lt;br /&gt;
+1.1  事件 &lt;br /&gt;
+1.2  随机变量 &lt;br /&gt;
+1.3  概率与条件概率 &lt;br /&gt;
+1.4  贝叶斯定理 &lt;br /&gt;
+1.5  朴素贝叶斯 &lt;br /&gt;
+1.6  期望、方差、协方差 &lt;br /&gt;
+1.7  最大似然、最大后验 &lt;br /&gt;&amp;nbsp;案例：垃圾邮件过滤   &lt;/p&gt;
+&lt;p&gt;第二章  概率统计中篇 &lt;br /&gt;
+2.1  常见分布总结 &lt;br /&gt;
+2.2  最大似然与贝叶斯的关系 &lt;br /&gt;
+2.3  熵与互信息 &lt;br /&gt;&amp;nbsp;案例：最大似然估计   &lt;/p&gt;
+&lt;p&gt;第三章  概率统计下篇 &lt;br /&gt;
+3.1  以 &lt;span class="caps"&gt;GMM&lt;/span&gt; 为例的统计建模 &lt;br /&gt;
+3.2  &lt;span class="caps"&gt;EM&lt;/span&gt; 算法  &lt;br /&gt;
+案例：&lt;span class="caps"&gt;GMM&lt;/span&gt;&amp;nbsp;实践   &lt;/p&gt;</content></entry><entry><title>using Git in a team</title><link href="https://yupengyan.com/using-git-in-a-team" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/using-git-in-a-team</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Git windows&amp;nbsp;客户端安装&lt;/li&gt;
 &lt;/ol&gt;
@@ -690,149 +832,7 @@ git push -u origin xzl
 git commit -m &amp;quot;add README&amp;quot;
 git merge xzl
 git push -u origin develop
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>github quick start</title><link href="https://yupengyan.com/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
-Get started by creating a new file or uploading an existing file. 
-We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
-Get started by creating a new file or uploading an existing file. 
-We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy&amp;quot; &amp;gt;&amp;gt; README.md
-git init
-git add README.md
-git commit -m &amp;quot;first commit&amp;quot;
-git remote add origin https://github.com/yupengyan/ve3_scrapy.git
-git push -u origin master
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;blockquote&gt;
-&lt;p&gt;or push an existing repository from the command&amp;nbsp;line&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd existing_repo
-git remote rename origin old-origin
-git remote add origin https://github.com/yupengyan/ve3_scrapy.git
-git push -u origin master
-or 
-git push -u origin --all
-or 
-git push -u origin --tags
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>math for AI</title><link href="https://yupengyan.com/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;第1章 高等数学&lt;br /&gt;
-1.1 导数和偏导数&lt;br /&gt;
-1.2 梯度向量  &lt;br /&gt;
-1.3 极值定理 &lt;br /&gt;
-1.4 Jacobbi矩阵 &lt;br /&gt;
-1.5 Hessian矩阵 &lt;br /&gt;
-1.6 泰勒展开公式 &lt;br /&gt;
-1.7 拉格朗日乘数法 &lt;br /&gt;
-第2章 线性代数 &lt;br /&gt;
-2.1 向量及其运算 &lt;br /&gt;
-2.2 范数 &lt;br /&gt;
-2.3 矩阵及其运算 &lt;br /&gt;
-2.4 逆矩阵 &lt;br /&gt;
-2.5 二次型 &lt;br /&gt;
-2.6 矩阵的正定性 &lt;br /&gt;
-2.7 矩阵的特征值与特征向量 &lt;br /&gt;
-2.8 矩阵的奇异值分解 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;第1章 高等数学&lt;br /&gt;
-1.1 导数和偏导数&lt;br /&gt;
-1.2 梯度向量  &lt;br /&gt;
-1.3 极值定理 &lt;br /&gt;
-1.4 Jacobbi矩阵 &lt;br /&gt;
-1.5 Hessian矩阵 &lt;br /&gt;
-1.6 泰勒展开公式 &lt;br /&gt;
-1.7 拉格朗日乘数法 &lt;br /&gt;
-第2章 线性代数 &lt;br /&gt;
-2.1 向量及其运算 &lt;br /&gt;
-2.2 范数 &lt;br /&gt;
-2.3 矩阵及其运算 &lt;br /&gt;
-2.4 逆矩阵 &lt;br /&gt;
-2.5 二次型 &lt;br /&gt;
-2.6 矩阵的正定性 &lt;br /&gt;
-2.7 矩阵的特征值与特征向量 &lt;br /&gt;
-2.8 矩阵的奇异值分解 &lt;br /&gt;
-第3章 概率论 &lt;br /&gt;
-3.1 概率、随机事件和随机变量 &lt;br /&gt;
-3.2 条件概率与贝叶斯公式  &lt;br /&gt;
-3.3 常用的概率分布 &lt;br /&gt;
-3.4 随机变量的均值和方差、协方差 &lt;br /&gt;
-3.5 最大似然估计 &lt;br /&gt;
-第4章 最优化 &lt;br /&gt;
-4.1 凸集、凸函数 &lt;br /&gt;
-4.2 凸优化问题的标准形式 &lt;br /&gt;
-4.3&amp;nbsp;线性规划问题   &lt;/p&gt;
-&lt;h2 id="_1"&gt;优化论初步&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;第一章  优化迭代法统一论 &lt;br /&gt;
-1.0  本微专业概述 &lt;br /&gt;
-1.1  线性回归建模 &lt;br /&gt;
-1.2  无约束优化梯度分析法（上） &lt;br /&gt;
-1.3  无约束优化梯度分析法（下） &lt;br /&gt;
-1.4  无约束迭代法 &lt;br /&gt;
-1.5  线性回归求解 &lt;br /&gt;
-1.6&amp;nbsp;案例分析    &lt;/p&gt;
-&lt;p&gt;第二章  深度学习反向传播 &lt;br /&gt;
-2.1  回归与分类、神经网络 &lt;br /&gt;
-2.2  BP算法（上） &lt;br /&gt;
-2.3  BP算法（下） &lt;br /&gt;
-2.4&amp;nbsp;计算图   &lt;/p&gt;
-&lt;h2 id="_2"&gt;优化论进阶&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;第一章  凸优化基础 &lt;br /&gt;
-1.1  一般优化问题 &lt;br /&gt;
-1.2  凸集和凸函数基础（上） &lt;br /&gt;
-1.3  凸集和凸函数基础（下） &lt;br /&gt;
-1.4  凸优化问题  &lt;br /&gt;
-1.5&amp;nbsp;案例分析   &lt;/p&gt;
-&lt;p&gt;第二章  凸优化进阶之对偶理论 &lt;br /&gt;
-2.1  凸优化问题 &lt;br /&gt;
-2.2  对偶（上） &lt;br /&gt;
-2.3  对偶（下） &lt;br /&gt;
-2.4&amp;nbsp;问题案例   &lt;/p&gt;
-&lt;p&gt;第三章  &lt;span class="caps"&gt;SVM&lt;/span&gt; &lt;br /&gt;
-3.1  问题案例 &lt;br /&gt;
-3.2  &lt;span class="caps"&gt;SVM&lt;/span&gt; 建模 &lt;br /&gt;
-3.3  &lt;span class="caps"&gt;SVM&lt;/span&gt; 求解 &lt;br /&gt;
-3.4  &lt;span class="caps"&gt;SVM&lt;/span&gt;&amp;nbsp;扩展，附案例   &lt;/p&gt;
-&lt;h2 id="_3"&gt;数据降维的艺术&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;第一章  矩阵分析上篇  &lt;br /&gt;
-1.1  矩阵与张量 &lt;br /&gt;
-1.2  可逆矩阵 &lt;br /&gt;
-1.3  线性相关 &lt;br /&gt;
-1.4  子空间 &lt;br /&gt;
-1.5  范数 &lt;br /&gt;
-1.6 特殊矩阵和特征分解 &lt;br /&gt;
-案例：&lt;span class="caps"&gt;PCA&lt;/span&gt;&amp;nbsp;数据降维   &lt;/p&gt;
-&lt;p&gt;第二章  矩阵分析下篇  &lt;br /&gt;
-2.1  &lt;span class="caps"&gt;SVD&lt;/span&gt; &lt;br /&gt;
-2.2  &lt;span class="caps"&gt;SVD&lt;/span&gt; 与特征分解关系 &lt;br /&gt;
-2.3  图像压缩 &lt;br /&gt;
-2.4  伪逆 &lt;br /&gt;
-2.5  迹与行列式 &lt;br /&gt;
-案例：&lt;span class="caps"&gt;SVD&lt;/span&gt;&amp;nbsp;对图像进行压缩   &lt;/p&gt;
-&lt;h2 id="_4"&gt;统计推断的魅力&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;第一章  概率统计上篇  &lt;br /&gt;
-1.1  事件 &lt;br /&gt;
-1.2  随机变量 &lt;br /&gt;
-1.3  概率与条件概率 &lt;br /&gt;
-1.4  贝叶斯定理 &lt;br /&gt;
-1.5  朴素贝叶斯 &lt;br /&gt;
-1.6  期望、方差、协方差 &lt;br /&gt;
-1.7  最大似然、最大后验 &lt;br /&gt;&amp;nbsp;案例：垃圾邮件过滤   &lt;/p&gt;
-&lt;p&gt;第二章  概率统计中篇 &lt;br /&gt;
-2.1  常见分布总结 &lt;br /&gt;
-2.2  最大似然与贝叶斯的关系 &lt;br /&gt;
-2.3  熵与互信息 &lt;br /&gt;&amp;nbsp;案例：最大似然估计   &lt;/p&gt;
-&lt;p&gt;第三章  概率统计下篇 &lt;br /&gt;
-3.1  以 &lt;span class="caps"&gt;GMM&lt;/span&gt; 为例的统计建模 &lt;br /&gt;
-3.2  &lt;span class="caps"&gt;EM&lt;/span&gt; 算法  &lt;br /&gt;
-案例：&lt;span class="caps"&gt;GMM&lt;/span&gt;&amp;nbsp;实践   &lt;/p&gt;</content></entry><entry><title>Build a blog with hexo</title><link href="https://yupengyan.com/build-a-blog-with-hexo" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-01-17:/build-a-blog-with-hexo</id><summary type="html">&lt;h1 id="node"&gt;安装node&lt;a class="headerlink" href="#node" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Build a blog with hexo</title><link href="https://yupengyan.com/build-a-blog-with-hexo" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-01-17:/build-a-blog-with-hexo</id><summary type="html">&lt;h1 id="node"&gt;安装node&lt;a class="headerlink" href="#node" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;在Windows下，从 https://nodejs.org/en/&amp;nbsp;下载以.msi为扩展名的安装包，如果不需要进行node相关开发的话，选LTS版本就够用了。&lt;/li&gt;
 &lt;/ol&gt;

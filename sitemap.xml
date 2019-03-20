@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://yupengyan.com/</loc>
-<lastmod>2019-03-20T11:41:08-00:00</lastmod>
+<lastmod>2019-03-20T11:41:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://yupengyan.com/archives.html</loc>
-<lastmod>2019-03-20T11:41:08-00:00</lastmod>
+<lastmod>2019-03-20T11:41:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://yupengyan.com/tags.html</loc>
-<lastmod>2019-03-20T11:41:08-00:00</lastmod>
+<lastmod>2019-03-20T11:41:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://yupengyan.com/categories.html</loc>
-<lastmod>2019-03-20T11:41:08-00:00</lastmod>
+<lastmod>2019-03-20T11:41:53-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -60,13 +60,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://yupengyan.com/git-handbookusing-git-in-a-team</loc>
-<lastmod>2019-02-22T12:38:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://yupengyan.com/github-quick-start</loc>
 <lastmod>2019-02-22T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -75,6 +68,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://yupengyan.com/math-for-ai</loc>
+<lastmod>2019-02-22T12:38:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://yupengyan.com/using-git-in-a-team</loc>
 <lastmod>2019-02-22T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>

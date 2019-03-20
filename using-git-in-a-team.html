@@ -6,10 +6,10 @@
         <meta name="author" content="Joe Yu" />
         <meta name="copyright" content="Joe Yu" />
 
-        <meta name="description" content="AI基石¶ 第1章 高等数学 1.1 导数和偏导数 1.2 梯度向量 1.3 极值定理 1.4 Jacobbi矩阵 1.5 Hessian矩阵 1.6 泰勒展开公式 1.7 拉格朗日乘数法 第2章 线性代数 2.1 向量及其运算 2.2 范数 2.3 矩阵及其运算 2.4 逆矩阵 2.5 二次型 2.6 矩阵的正定性 2.7 矩阵的特征值与特征向量 2.8 矩阵的奇异值分解 …
+        <meta name="description" content="前期准备¶ Git windows 客户端安装 管理者¶ 新建一个develop分支（from master）http://172.19.13.51:8929/ 为合作者新建一个合作者分支，如cjj 合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。 合作者¶ Git global setup git config --global user.name "yupengyan" git config --global user.email "ypy@example.com" Create a new repository git clone git@gitlab.library.gdufe.edu.cn:pengyan …
 " />
 <meta name="keywords" content=", Server, " />
-        <title>math for <span class="caps">AI</span>  · Yu's Blog
+        <title>using Git in a&nbsp;team  · Yu's Blog
 </title>
         <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
         <link rel="stylesheet" type="text/css" href="https://yupengyan.com/theme/css/slim-081711.css">
@@ -55,113 +55,159 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="https://yupengyan.com/math-for-ai"> math for <span class="caps">AI</span>  </a></h1>
+    <h1><a href="https://yupengyan.com/using-git-in-a-team"> using Git in a&nbsp;team  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <h2 id="ai">AI基石<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<p>第1章 高等数学<br />
-1.1 导数和偏导数<br />
-1.2 梯度向量  <br />
-1.3 极值定理 <br />
-1.4 Jacobbi矩阵 <br />
-1.5 Hessian矩阵 <br />
-1.6 泰勒展开公式 <br />
-1.7 拉格朗日乘数法 <br />
-第2章 线性代数 <br />
-2.1 向量及其运算 <br />
-2.2 范数 <br />
-2.3 矩阵及其运算 <br />
-2.4 逆矩阵 <br />
-2.5 二次型 <br />
-2.6 矩阵的正定性 <br />
-2.7 矩阵的特征值与特征向量 <br />
-2.8 矩阵的奇异值分解 <br />
-第3章 概率论 <br />
-3.1 概率、随机事件和随机变量 <br />
-3.2 条件概率与贝叶斯公式  <br />
-3.3 常用的概率分布 <br />
-3.4 随机变量的均值和方差、协方差 <br />
-3.5 最大似然估计 <br />
-第4章 最优化 <br />
-4.1 凸集、凸函数 <br />
-4.2 凸优化问题的标准形式 <br />
-4.3&nbsp;线性规划问题   </p>
-<h2 id="_1">优化论初步<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>第一章  优化迭代法统一论 <br />
-1.0  本微专业概述 <br />
-1.1  线性回归建模 <br />
-1.2  无约束优化梯度分析法（上） <br />
-1.3  无约束优化梯度分析法（下） <br />
-1.4  无约束迭代法 <br />
-1.5  线性回归求解 <br />
-1.6&nbsp;案例分析    </p>
-<p>第二章  深度学习反向传播 <br />
-2.1  回归与分类、神经网络 <br />
-2.2  BP算法（上） <br />
-2.3  BP算法（下） <br />
-2.4&nbsp;计算图   </p>
-<h2 id="_2">优化论进阶<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>第一章  凸优化基础 <br />
-1.1  一般优化问题 <br />
-1.2  凸集和凸函数基础（上） <br />
-1.3  凸集和凸函数基础（下） <br />
-1.4  凸优化问题  <br />
-1.5&nbsp;案例分析   </p>
-<p>第二章  凸优化进阶之对偶理论 <br />
-2.1  凸优化问题 <br />
-2.2  对偶（上） <br />
-2.3  对偶（下） <br />
-2.4&nbsp;问题案例   </p>
-<p>第三章  <span class="caps">SVM</span> <br />
-3.1  问题案例 <br />
-3.2  <span class="caps">SVM</span> 建模 <br />
-3.3  <span class="caps">SVM</span> 求解 <br />
-3.4  <span class="caps">SVM</span>&nbsp;扩展，附案例   </p>
-<h2 id="_3">数据降维的艺术<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>第一章  矩阵分析上篇  <br />
-1.1  矩阵与张量 <br />
-1.2  可逆矩阵 <br />
-1.3  线性相关 <br />
-1.4  子空间 <br />
-1.5  范数 <br />
-1.6 特殊矩阵和特征分解 <br />
-案例：<span class="caps">PCA</span>&nbsp;数据降维   </p>
-<p>第二章  矩阵分析下篇  <br />
-2.1  <span class="caps">SVD</span> <br />
-2.2  <span class="caps">SVD</span> 与特征分解关系 <br />
-2.3  图像压缩 <br />
-2.4  伪逆 <br />
-2.5  迹与行列式 <br />
-案例：<span class="caps">SVD</span>&nbsp;对图像进行压缩   </p>
-<h2 id="_4">统计推断的魅力<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>第一章  概率统计上篇  <br />
-1.1  事件 <br />
-1.2  随机变量 <br />
-1.3  概率与条件概率 <br />
-1.4  贝叶斯定理 <br />
-1.5  朴素贝叶斯 <br />
-1.6  期望、方差、协方差 <br />
-1.7  最大似然、最大后验 <br />&nbsp;案例：垃圾邮件过滤   </p>
-<p>第二章  概率统计中篇 <br />
-2.1  常见分布总结 <br />
-2.2  最大似然与贝叶斯的关系 <br />
-2.3  熵与互信息 <br />&nbsp;案例：最大似然估计   </p>
-<p>第三章  概率统计下篇 <br />
-3.1  以 <span class="caps">GMM</span> 为例的统计建模 <br />
-3.2  <span class="caps">EM</span> 算法  <br />
-案例：<span class="caps">GMM</span>&nbsp;实践   </p>
+            <h2 id="_1">前期准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Git windows&nbsp;客户端安装</li>
+</ol>
+<h2 id="_2">管理者<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>新建一个develop分支（from&nbsp;master）http://172.19.13.51:8929/</li>
+<li>为合作者新建一个合作者分支，如cjj</li>
+</ol>
+<p>合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。</p>
+<h2 id="_3">合作者<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span>Git global setup
+git config --global user.name &quot;yupengyan&quot;
+git config --global user.email &quot;ypy@example.com&quot;
+</pre></div>
+
+
+<p>Create a new&nbsp;repository</p>
+<div class="highlight"><pre><span></span>git clone git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+cd ve3_smartkits
+touch README.md
+git add README.md
+git commit -m &quot;add README&quot;
+git push -u origin master
+</pre></div>
+
+
+<p>Existing&nbsp;folder</p>
+<div class="highlight"><pre><span></span>cd existing_folder
+git init
+git remote add origin git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+git add .
+git commit -m &quot;Initial commit&quot;
+git push -u origin master
+</pre></div>
+
+
+<p>Existing Git&nbsp;repository</p>
+<div class="highlight"><pre><span></span>cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+git push -u origin --all
+git push -u origin --tags
+</pre></div>
+
+
+<p>以项目 http://172.19.13.51:8929/pengyan/dl_documents 合作为例：
+1. 安装Git <br />
+2. Git global&nbsp;setup     </p>
+<div class="highlight"><pre><span></span>git config --global user.name &quot;py&quot;
+git config --global user.email &quot;ypy@gdufe.edu.cn&quot;
+</pre></div>
+
+
+<p>对于需要用Key认证的，先配置。In ~/.ssh/config, add:&nbsp;(如果不是默认22，指定Port很重要)</p>
+<div class="highlight"><pre><span></span>host gitlab.library.gdufe.edu.cn
+  HostName 172.19.13.51
+  Port 2289
+  IdentityFile  E:/OneDrive/privates/#keys/Identity-gitlib-openssh
+  User pengyan
+host git-2
+  HostName 172.19.13.51
+  Port 2289
+  IdentityFile  E:/OneDrive/privates/#keys/Identity-gitlib-openssh
+  User pengyan
+</pre></div>
+
+
+<ol>
+<li>Create a new&nbsp;repository    </li>
+</ol>
+<div class="highlight"><pre><span></span>cd my_work_place
+git clone git@gitlab.library.gdufe.edu.cn:pengyan/dl_documents.git
+cd dl_documents
+</pre></div>
+
+
+<h2 id="_4">常用操作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>查看有什么分支    </li>
+</ol>
+<div class="highlight"><pre><span></span>git branch
+</pre></div>
+
+
+<ol>
+<li>这个命令的意思就是拉取远程的一个叫develop的分支，并在本地创建一个叫develop的分支和远程的分支匹配。    </li>
+</ol>
+<div class="highlight"><pre><span></span>git fetch origin develop:develop
+</pre></div>
+
+
+<ol>
+<li>拉取自己的分支    </li>
+</ol>
+<div class="highlight"><pre><span></span>git fetch origin xzl:xzl
+</pre></div>
+
+
+<ol>
+<li>每个人的所有开发工作都只在自己的分支开发。例如小谢开发，你就在本地切换到自己的xzl分支然后进行开发。   </li>
+</ol>
+<div class="highlight"><pre><span></span>git checkout xzl
+</pre></div>
+
+
+<ol>
+<li>每个人只允许在自己的分支直接push远程分支。    </li>
+</ol>
+<div class="highlight"><pre><span></span>touch README.md
+git add README.md
+git commit -m &quot;add README&quot;
+git push -u origin xzl
+</pre></div>
+
+
+<h2 id="_5">合并的时候必须遵循以下条件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>a)&nbsp;首先，本地切换到develop分支    </p>
+<div class="highlight"><pre><span></span>git checkout develop
+</pre></div>
+
+
+<p>b) pull&nbsp;develop分支最新内容到本地      </p>
+<div class="highlight"><pre><span></span>git pull origin develop   
+</pre></div>
+
+
+<p>c)&nbsp;保证develop最新前提下合并自己的分支xzl   </p>
+<div class="highlight"><pre><span></span>git merge xzl
+</pre></div>
+
+
+<p>d) 如果出现conflict那么清除conflict之后，commit.然后把本地develop push&nbsp;到远程的develop.每完成一个功能就提交一次。不要累计代码。    </p>
+<div class="highlight"><pre><span></span>git add README.md
+git commit -m &quot;add README&quot;
+git merge xzl
+git push -u origin develop
+</pre></div>
             <aside>
             <hr/>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="https://yupengyan.com/using-git-in-a-team" title="Previous: using Git in a&nbsp;team">using Git in a&nbsp;team</a></li>
+                <li class="previous_article">« <a href="https://yupengyan.com/build-a-blog-with-hexo" title="Previous: Build a blog with&nbsp;hexo">Build a blog with&nbsp;hexo</a></li>
  
-                <li class="next_article"><a href="https://yupengyan.com/github-quick-start" title="Next: github quick&nbsp;start">github quick&nbsp;start</a> »</li>
+                <li class="next_article"><a href="https://yupengyan.com/math-for-ai" title="Next: math for <span class="caps">AI</span>">math for <span class="caps">AI</span></a> »</li>
             </ul>
             </nav>
             </aside>
