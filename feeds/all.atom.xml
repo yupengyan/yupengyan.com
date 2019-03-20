@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2019-03-14T08:56:00+08:00</updated><entry><title>github pages</title><link href="/github-pages" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-03-14:/github-pages</id><summary type="html">&lt;h2 id="set-up-a-custom-domain"&gt;Set up a Custom domain&lt;a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yu's Blog</title><link href="https://yupengyan.com/" rel="alternate"></link><link href="https://yupengyan.com/feeds/all.atom.xml" rel="self"></link><id>https://yupengyan.com/</id><updated>2019-03-14T08:56:00+08:00</updated><entry><title>github pages</title><link href="https://yupengyan.com/github-pages" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-03-14:/github-pages</id><summary type="html">&lt;h2 id="set-up-a-custom-domain"&gt;Set up a Custom domain&lt;a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt;: Add an A record point to github&amp;nbsp;server.    &lt;/li&gt;
 &lt;/ol&gt;
@@ -10,15 +10,15 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="gh-pages-dns-records" src="/images/gh-pages-dns-records.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="gh-pages-dns-records" src="https://yupengyan.com/images/gh-pages-dns-records.jpg" /&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Go to your repo&amp;nbsp;setting.      &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Rename your repositry name to :example.com &lt;br /&gt;
-&lt;img alt="gh-pages-repo-name" src="/images/gh-pages-repo-name.jpg" /&gt;&lt;/li&gt;
+&lt;img alt="gh-pages-repo-name" src="https://yupengyan.com/images/gh-pages-repo-name.jpg" /&gt;&lt;/li&gt;
 &lt;li&gt;Setting -&amp;gt; Github pages -&amp;gt; Custom domain -&amp;gt; example.com  &lt;br /&gt;
-&lt;img alt="gh-pages-custom-domain" src="/images/gh-pages-custom-domain.jpg" /&gt;&lt;/li&gt;
+&lt;img alt="gh-pages-custom-domain" src="https://yupengyan.com/images/gh-pages-custom-domain.jpg" /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -33,15 +33,15 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="gh-pages-dns-records" src="/images/gh-pages-dns-records.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="gh-pages-dns-records" src="https://yupengyan.com/images/gh-pages-dns-records.jpg" /&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Go to your repo&amp;nbsp;setting.      &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Rename your repositry name to :example.com &lt;br /&gt;
-&lt;img alt="gh-pages-repo-name" src="/images/gh-pages-repo-name.jpg" /&gt;&lt;/li&gt;
+&lt;img alt="gh-pages-repo-name" src="https://yupengyan.com/images/gh-pages-repo-name.jpg" /&gt;&lt;/li&gt;
 &lt;li&gt;Setting -&amp;gt; Github pages -&amp;gt; Custom domain -&amp;gt; example.com  &lt;br /&gt;
-&lt;img alt="gh-pages-custom-domain" src="/images/gh-pages-custom-domain.jpg" /&gt;&lt;/li&gt;
+&lt;img alt="gh-pages-custom-domain" src="https://yupengyan.com/images/gh-pages-custom-domain.jpg" /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -52,11 +52,11 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="gh-pages-CNAME" src="/images/gh-pages-CNAME.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="gh-pages-CNAME" src="https://yupengyan.com/images/gh-pages-CNAME.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;That&amp;#8217;s&amp;nbsp;it!&lt;/p&gt;
 &lt;h2 id="faq"&gt;&lt;span class="caps"&gt;FAQ&lt;/span&gt;:&lt;a class="headerlink" href="#faq" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Q: &lt;span class="caps"&gt;CNAME&lt;/span&gt; already taken, what should I&amp;nbsp;do?&lt;/p&gt;
-&lt;p&gt;A: Ask github for help! They are very nice.Go to see more &lt;a href="https://help.github.com/en/articles/troubleshooting-custom-domains#cname-already-taken"&gt;detail&lt;/a&gt;.&lt;/p&gt;</content><category term="github pages"></category><category term="Server"></category></entry><entry><title>markdown guide</title><link href="/markdown-guide" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-03-14:/markdown-guide</id><summary type="html">&lt;h2 id="images"&gt;Images&lt;a class="headerlink" href="#images" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;A: Ask github for help! They are very nice.Go to see more &lt;a href="https://help.github.com/en/articles/troubleshooting-custom-domains#cname-already-taken"&gt;detail&lt;/a&gt;.&lt;/p&gt;</content><category term="github pages"></category><category term="Server"></category></entry><entry><title>markdown guide</title><link href="https://yupengyan.com/markdown-guide" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-03-14:/markdown-guide</id><summary type="html">&lt;h2 id="images"&gt;Images&lt;a class="headerlink" href="#images" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Way&amp;nbsp;1:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  Open the file containing the Linux mascot.
 2.  Marvel at its beauty.
@@ -126,7 +126,7 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 &lt;p&gt;Way 3:Quick&amp;nbsp;links&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;https:&lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="na"&gt;www&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;markdownguide&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;fake&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="na"&gt;example&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>crawl base: pyppeteer handbook</title><link href="/crawl-base-pyppeteer-handbook" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-28:/crawl-base-pyppeteer-handbook</id><summary type="html">&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>crawl base: pyppeteer handbook</title><link href="https://yupengyan.com/crawl-base-pyppeteer-handbook" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-28:/crawl-base-pyppeteer-handbook</id><summary type="html">&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;运行JS脚本：&lt;/li&gt;
 &lt;/ol&gt;
@@ -206,7 +206,7 @@ eat: it was a [hobbit-hole][1], and that means comfort.
     &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_event_loop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_until_complete&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="crawl"></category><category term="pyppeteer"></category><category term="Review"></category></entry><entry><title>crawl base: selector</title><link href="/crawl-base-selector" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-28:/crawl-base-selector</id><summary type="html">&lt;h2 id="css"&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt; 选择器参考手册&lt;a class="headerlink" href="#css" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="crawl"></category><category term="pyppeteer"></category><category term="Review"></category></entry><entry><title>crawl base: selector</title><link href="https://yupengyan.com/crawl-base-selector" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-28:/crawl-base-selector</id><summary type="html">&lt;h2 id="css"&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt; 选择器参考手册&lt;a class="headerlink" href="#css" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -535,7 +535,7 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 &lt;/table&gt;
 &lt;p&gt;参考：
 http://www.w3school.com.cn/cssref/css_selectors.&lt;span class="caps"&gt;ASP&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>git handbook</title><link href="/git-handbook" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-22:/git-handbook</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>git handbook</title><link href="https://yupengyan.com/git-handbook" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/git-handbook</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Git windows&amp;nbsp;客户端安装&lt;/li&gt;
 &lt;/ol&gt;
@@ -690,7 +690,7 @@ git push -u origin xzl
 git commit -m &amp;quot;add README&amp;quot;
 git merge xzl
 git push -u origin develop
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>github quick start</title><link href="/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>github quick start</title><link href="https://yupengyan.com/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
 Get started by creating a new file or uploading an existing file. We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -722,7 +722,7 @@ or
 git push -u origin --all
 or 
 git push -u origin --tags
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>math for AI</title><link href="/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>math for AI</title><link href="https://yupengyan.com/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;第1章 高等数学&lt;br /&gt;
 1.1 导数和偏导数&lt;br /&gt;
 1.2 梯度向量  &lt;br /&gt;
@@ -830,7 +830,7 @@ git push -u origin --tags
 &lt;p&gt;第三章  概率统计下篇 &lt;br /&gt;
 3.1  以 &lt;span class="caps"&gt;GMM&lt;/span&gt; 为例的统计建模 &lt;br /&gt;
 3.2  &lt;span class="caps"&gt;EM&lt;/span&gt; 算法  &lt;br /&gt;
-案例：&lt;span class="caps"&gt;GMM&lt;/span&gt;&amp;nbsp;实践   &lt;/p&gt;</content></entry><entry><title>Build a blog with hexo</title><link href="/build-a-blog-with-hexo" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/build-a-blog-with-hexo</id><summary type="html">&lt;h1 id="node"&gt;安装node&lt;a class="headerlink" href="#node" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+案例：&lt;span class="caps"&gt;GMM&lt;/span&gt;&amp;nbsp;实践   &lt;/p&gt;</content></entry><entry><title>Build a blog with hexo</title><link href="https://yupengyan.com/build-a-blog-with-hexo" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-01-17:/build-a-blog-with-hexo</id><summary type="html">&lt;h1 id="node"&gt;安装node&lt;a class="headerlink" href="#node" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;在Windows下，从 https://nodejs.org/en/&amp;nbsp;下载以.msi为扩展名的安装包，如果不需要进行node相关开发的话，选LTS版本就够用了。&lt;/li&gt;
 &lt;/ol&gt;
@@ -971,7 +971,7 @@ hexo deploy -g # 可简写为 hexo d -g ，同上
 从hexo&amp;nbsp;themes找到何意的主题，clone下来，放到站点本地仓库的themes目录下，修改_config.yml文件的theme字段为对应的主题名&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;theme: light
-更多插件等功能，建议去hexo&amp;nbsp;官网查看。&lt;/p&gt;</content></entry><entry><title>firewalld handbook</title><link href="/firewalld-handbook" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/firewalld-handbook</id><summary type="html">&lt;h1 id="cmd"&gt;cmd&lt;a class="headerlink" href="#cmd" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+更多插件等功能，建议去hexo&amp;nbsp;官网查看。&lt;/p&gt;</content></entry><entry><title>firewalld handbook</title><link href="https://yupengyan.com/firewalld-handbook" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-01-17:/firewalld-handbook</id><summary type="html">&lt;h1 id="cmd"&gt;cmd&lt;a class="headerlink" href="#cmd" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;systemctl enable firewalld
 systemctl disable firewalld
 systemctl start firewalld
@@ -997,13 +997,13 @@ firewall-cmd --reload
 
 firewall-cmd --permanent --zone=public --add-port=80/tcp
 firewall-cmd --permanent --zone=public --add-port=443/tcp
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>mongodb handbook</title><link href="/mongodb-handbook" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/mongodb-handbook</id><summary type="html">&lt;h2 id="_1"&gt;时间格式的查询&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>mongodb handbook</title><link href="https://yupengyan.com/mongodb-handbook" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-01-17:/mongodb-handbook</id><summary type="html">&lt;h2 id="_1"&gt;时间格式的查询&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;datetime满足大于xxx时间：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{&amp;#39;datetime&amp;#39;:{&amp;#39;$gte&amp;#39;:{&amp;quot;$date&amp;quot;:&amp;quot;2018-11-01T05:36:45Z&amp;quot;}}}
 &lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;时间格式的查询&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;datetime满足大于xxx时间：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{&amp;#39;datetime&amp;#39;:{&amp;#39;$gte&amp;#39;:{&amp;quot;$date&amp;quot;:&amp;quot;2018-11-01T05:36:45Z&amp;quot;}}}
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>web server protect</title><link href="/web-server-protect" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/web-server-protect</id><summary type="html">&lt;h2 id="_1"&gt;检测连接：&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>web server protect</title><link href="https://yupengyan.com/web-server-protect" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-01-17:/web-server-protect</id><summary type="html">&lt;h2 id="_1"&gt;检测连接：&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -nt | grep your_server_ip | awk &amp;#39;{print $5}&amp;#39; | awk -F&amp;quot;:&amp;quot; &amp;#39;{print $1}&amp;#39;| sort | uniq -c | sort -r -n
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1146,7 +1146,7 @@ haproxy.cfg frontend&amp;nbsp;放入：  &lt;/li&gt;
 180.163.225.0/24
 42.236.99.0/24
 42.236.10.0/24
-&lt;/pre&gt;&lt;/div&gt;</content><category term="haproxy"></category><category term="safe"></category><category term="Server"></category></entry><entry><title>docker errors</title><link href="/docker-errors" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/docker-errors</id><summary type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="haproxy"></category><category term="safe"></category><category term="Server"></category></entry><entry><title>docker errors</title><link href="https://yupengyan.com/docker-errors" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2018-12-18:/docker-errors</id><summary type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="host-mapping-homedatadv_haproxy-has-no-effect"&gt;Host mapping &amp;#8220;/home/data/dv_haproxy&amp;#8221; has no effect&lt;a class="headerlink" href="#host-mapping-homedatadv_haproxy-has-no-effect" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;https://111qqz.com/2018/11/%E8%&lt;span class="caps"&gt;AE&lt;/span&gt;%B0%E4%B8%80%E6%&lt;span class="caps"&gt;AC&lt;/span&gt;%A1%E5%9C%A8-docker-compose-%E4%B8%&lt;span class="caps"&gt;AD&lt;/span&gt;%E4%&lt;span class="caps"&gt;BD&lt;/span&gt;%&lt;span class="caps"&gt;BF&lt;/span&gt;%E7%94%A8volume%E7%9A%84%E8%B8%A9%E5%9D%91%E8%&lt;span class="caps"&gt;AE&lt;/span&gt;%B0%E5 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="host-mapping-homedatadv_haproxy-has-no-effect"&gt;Host mapping &amp;#8220;/home/data/dv_haproxy&amp;#8221; has no effect&lt;a class="headerlink" href="#host-mapping-homedatadv_haproxy-has-no-effect" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
@@ -1188,7 +1188,7 @@ haproxy.cfg frontend&amp;nbsp;放入：  &lt;/li&gt;
 
 
 &lt;p&gt;[root@localhost gitlab]# docker restart gitlab
-Error response from daemon: Cannot restart container gitlab: oci runtime error: container with id exists:&amp;nbsp;ff85edf195f77b5415f1089c81d7d51759e04f4875dd2b224262d189f3c50e3e&lt;/p&gt;</content></entry><entry><title>docker handbook</title><link href="/docker-handbook" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/docker-handbook</id><summary type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+Error response from daemon: Cannot restart container gitlab: oci runtime error: container with id exists:&amp;nbsp;ff85edf195f77b5415f1089c81d7d51759e04f4875dd2b224262d189f3c50e3e&lt;/p&gt;</content></entry><entry><title>docker handbook</title><link href="https://yupengyan.com/docker-handbook" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2018-12-18:/docker-handbook</id><summary type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo docker build -t ubuntu_precise/galera:codership .
 docker build -f Dockerfile-py2 -t webapp .
 
@@ -1240,7 +1240,7 @@ https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;docker run -e &lt;span class="caps"&gt;MYVAR1&lt;/span&gt; &amp;#8212;env &lt;span class="caps"&gt;MYVAR2&lt;/span&gt;=foo &amp;#8212;env-file ./env.list ubuntu bash&amp;nbsp;&amp;#8220;`&lt;/p&gt;</content></entry><entry><title>docker’s installation in CentOS7</title><link href="/dockers-installation-in-centos7" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/dockers-installation-in-centos7</id><summary type="html">&lt;h2 id="install-docker"&gt;install Docker&lt;a class="headerlink" href="#install-docker" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;docker run -e &lt;span class="caps"&gt;MYVAR1&lt;/span&gt; &amp;#8212;env &lt;span class="caps"&gt;MYVAR2&lt;/span&gt;=foo &amp;#8212;env-file ./env.list ubuntu bash&amp;nbsp;&amp;#8220;`&lt;/p&gt;</content></entry><entry><title>docker’s installation in CentOS7</title><link href="https://yupengyan.com/dockers-installation-in-centos7" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2018-12-18:/dockers-installation-in-centos7</id><summary type="html">&lt;h2 id="install-docker"&gt;install Docker&lt;a class="headerlink" href="#install-docker" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum remove docker \
                   docker-client \
                   docker-client-latest \
@@ -1344,7 +1344,7 @@ docker pull&amp;nbsp;nginx&lt;/p&gt;
 &lt;p&gt;[root@Haproxy docker-haproxy-certbot]# cat /etc/centos-release
 CentOS Linux release 7.6.1810 (Core) 
 [root@Haproxy docker-haproxy-certbot]# docker -v
-Docker version 18.09.0, build&amp;nbsp;4d60db4&lt;/p&gt;</content></entry><entry><title>how to change the docker data’s location</title><link href="/how-to-change-the-docker-datas-location" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/how-to-change-the-docker-datas-location</id><summary type="html">&lt;h2 id="steps"&gt;Steps&lt;a class="headerlink" href="#steps" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+Docker version 18.09.0, build&amp;nbsp;4d60db4&lt;/p&gt;</content></entry><entry><title>how to change the docker data’s location</title><link href="https://yupengyan.com/how-to-change-the-docker-datas-location" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2018-12-18:/how-to-change-the-docker-datas-location</id><summary type="html">&lt;h2 id="steps"&gt;Steps&lt;a class="headerlink" href="#steps" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;默认情况下Docker的存放位置为：/var/lib/docker，跟系统同一个磁盘，很容易就满，而且不安全。可以考虑迁移到/home/data,步骤如下：
 1)  暂停docker服务：systemctl stop docker
 2)  数据迁移： mkdir /home/data/docker | mv /var/lib/docker /home/data/docker
@@ -1374,7 +1374,7 @@ umount /var/lib/docker/containers
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;最后用 df -h&amp;nbsp;，可以看到数据已经被迁移。&lt;/p&gt;</content></entry><entry><title>How to build a blog with Pelican</title><link href="/how-to-build-a-blog-with-pelican" rel="alternate"></link><published>2018-12-17T09:12:00+08:00</published><updated>2018-12-17T09:12:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-17:/how-to-build-a-blog-with-pelican</id><summary type="html">&lt;p&gt;http://docs.getpelican.com/en/3.6.3/quickstart.html&lt;/p&gt;
+&lt;p&gt;最后用 df -h&amp;nbsp;，可以看到数据已经被迁移。&lt;/p&gt;</content></entry><entry><title>How to build a blog with Pelican</title><link href="https://yupengyan.com/how-to-build-a-blog-with-pelican" rel="alternate"></link><published>2018-12-17T09:12:00+08:00</published><updated>2018-12-17T09:12:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2018-12-17:/how-to-build-a-blog-with-pelican</id><summary type="html">&lt;p&gt;http://docs.getpelican.com/en/3.6.3/quickstart.html&lt;/p&gt;
 &lt;h2 id="_1"&gt;环境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set dir=%cd%
 set pythonHome=%dir%\python-tools\Python3.6.5
@@ -1503,7 +1503,7 @@ PLUGINS = [&amp;#39;assets&amp;#39;, &amp;#39;sitemap&amp;#39;, &amp;#39;gravata
 &lt;p&gt;ghp-import -p -b master &amp;#8220;G:/private src&amp;nbsp;data/yupengyan.com/&amp;#8221; &lt;/p&gt;
 &lt;p&gt;http://docs.getpelican.com/en/3.6.3/tips.html&lt;/p&gt;
 &lt;p&gt;http://docs.getpelican.com/en/3.6.3/quickstart.html
-http://docs.getpelican.com/en/3.6.3/content.html&amp;nbsp;https://blog.john-pfeiffer.com/how-to-set-up-a-pelican-static-blog-site/&lt;/p&gt;</content></entry><entry><title>pandas handhook</title><link href="/pandas-handhook" rel="alternate"></link><published>2018-12-03T10:20:00+08:00</published><updated>2018-12-03T10:20:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-03:/pandas-handhook</id><summary type="html">&lt;blockquote&gt;
+http://docs.getpelican.com/en/3.6.3/content.html&amp;nbsp;https://blog.john-pfeiffer.com/how-to-set-up-a-pelican-static-blog-site/&lt;/p&gt;</content></entry><entry><title>pandas handhook</title><link href="https://yupengyan.com/pandas-handhook" rel="alternate"></link><published>2018-12-03T10:20:00+08:00</published><updated>2018-12-03T10:20:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2018-12-03:/pandas-handhook</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;删除含有空数据&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;

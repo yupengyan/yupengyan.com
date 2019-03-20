@@ -4,147 +4,147 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>/</loc>
-<lastmod>2019-03-20T11:28:41-00:00</lastmod>
+<loc>https://yupengyan.com/</loc>
+<lastmod>2019-03-20T11:31:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/archives.html</loc>
-<lastmod>2019-03-20T11:28:41-00:00</lastmod>
+<loc>https://yupengyan.com/archives.html</loc>
+<lastmod>2019-03-20T11:31:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/tags.html</loc>
-<lastmod>2019-03-20T11:28:41-00:00</lastmod>
+<loc>https://yupengyan.com/tags.html</loc>
+<lastmod>2019-03-20T11:31:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/categories.html</loc>
-<lastmod>2019-03-20T11:28:41-00:00</lastmod>
+<loc>https://yupengyan.com/categories.html</loc>
+<lastmod>2019-03-20T11:31:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/github-pages</loc>
+<loc>https://yupengyan.com/github-pages</loc>
 <lastmod>2019-03-14T08:56:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/markdown-guide</loc>
+<loc>https://yupengyan.com/markdown-guide</loc>
 <lastmod>2019-03-14T08:56:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/crawl-base-pyppeteer-handbook</loc>
+<loc>https://yupengyan.com/crawl-base-pyppeteer-handbook</loc>
 <lastmod>2019-02-28T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/crawl-base-selector</loc>
+<loc>https://yupengyan.com/crawl-base-selector</loc>
 <lastmod>2019-02-28T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/git-handbook</loc>
+<loc>https://yupengyan.com/git-handbook</loc>
 <lastmod>2019-02-22T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/github-quick-start</loc>
+<loc>https://yupengyan.com/github-quick-start</loc>
 <lastmod>2019-02-22T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/math-for-ai</loc>
+<loc>https://yupengyan.com/math-for-ai</loc>
 <lastmod>2019-02-22T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/build-a-blog-with-hexo</loc>
+<loc>https://yupengyan.com/build-a-blog-with-hexo</loc>
 <lastmod>2019-01-17T09:31:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/firewalld-handbook</loc>
+<loc>https://yupengyan.com/firewalld-handbook</loc>
 <lastmod>2019-01-17T09:31:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/mongodb-handbook</loc>
+<loc>https://yupengyan.com/mongodb-handbook</loc>
 <lastmod>2019-01-17T09:31:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/web-server-protect</loc>
+<loc>https://yupengyan.com/web-server-protect</loc>
 <lastmod>2019-01-17T09:31:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/docker-errors</loc>
+<loc>https://yupengyan.com/docker-errors</loc>
 <lastmod>2018-12-18T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/docker-handbook</loc>
+<loc>https://yupengyan.com/docker-handbook</loc>
 <lastmod>2018-12-18T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/dockers-installation-in-centos7</loc>
+<loc>https://yupengyan.com/dockers-installation-in-centos7</loc>
 <lastmod>2018-12-18T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/how-to-change-the-docker-datas-location</loc>
+<loc>https://yupengyan.com/how-to-change-the-docker-datas-location</loc>
 <lastmod>2018-12-18T12:38:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/how-to-build-a-blog-with-pelican</loc>
+<loc>https://yupengyan.com/how-to-build-a-blog-with-pelican</loc>
 <lastmod>2018-12-17T09:12:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>/pandas-handhook</loc>
+<loc>https://yupengyan.com/pandas-handhook</loc>
 <lastmod>2018-12-03T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
