@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yu's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2019-03-14T08:56:00+08:00</updated><entry><title>github pages</title><link href="/github-pages" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-03-14:/github-pages</id><summary type="html">&lt;h2 id="set-up-a-custom-domain"&gt;Set up a Custom domain&lt;a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt;: Add an A record point to github&amp;nbsp;server.    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="gh-pages-dns-records" src="/images/gh-pages-dns-records.jpg" /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Go to your repo&amp;nbsp;setting.      &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Rename your repositry name to :example.com &lt;br /&gt;
+&lt;img alt="gh-pages-repo-name" src="/images/gh-pages-repo-name.jpg" /&gt;&lt;/li&gt;
+&lt;li&gt;Setting -&amp;gt; Github pages -&amp;gt; Custom domain -&amp;gt; example.com  &lt;br /&gt;
+&lt;img alt="gh-pages-custom-domain" src="/images/gh-pages-custom-domain.jpg" /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h2 id="set-up-a-custom-domain"&gt;Set up a Custom domain&lt;a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt;: Add an A record point to github&amp;nbsp;server.    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="gh-pages-dns-records" src="/images/gh-pages-dns-records.jpg" /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Go to your repo&amp;nbsp;setting.      &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Rename your repositry name to :example.com &lt;br /&gt;
+&lt;img alt="gh-pages-repo-name" src="/images/gh-pages-repo-name.jpg" /&gt;&lt;/li&gt;
+&lt;li&gt;Setting -&amp;gt; Github pages -&amp;gt; Custom domain -&amp;gt; example.com  &lt;br /&gt;
+&lt;img alt="gh-pages-custom-domain" src="/images/gh-pages-custom-domain.jpg" /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a &lt;span class="caps"&gt;CNAME&lt;/span&gt; file in your&amp;nbsp;repositry.    &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;examle.com
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="gh-pages-CNAME" src="/images/gh-pages-CNAME.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s&amp;nbsp;it!&lt;/p&gt;
+&lt;h2 id="faq"&gt;&lt;span class="caps"&gt;FAQ&lt;/span&gt;:&lt;a class="headerlink" href="#faq" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Q: &lt;span class="caps"&gt;CNAME&lt;/span&gt; already taken, what should I&amp;nbsp;do?&lt;/p&gt;
+&lt;p&gt;A: Ask github for help! They are very nice.Go to see more &lt;a href="https://help.github.com/en/articles/troubleshooting-custom-domains#cname-already-taken"&gt;detail&lt;/a&gt;.&lt;/p&gt;</content><category term="github pages"></category><category term="Server"></category></entry><entry><title>markdown guide</title><link href="/markdown-guide" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-03-14:/markdown-guide</id><summary type="html">&lt;h2 id="images"&gt;Images&lt;a class="headerlink" href="#images" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Way&amp;nbsp;1:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  Open the file containing the Linux mascot.
+2.  Marvel at its beauty.
+
+    ![Tux, the Linux mascot](/assets/images/tux.png)
+
+3.  Close the file.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Way 2:Reference&amp;nbsp;style&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Here&amp;#39;s an image:
+
+![][image_ref_a32ff4ads]
+
+More text here...
+...
+
+[image_ref_a32ff4ads]: data:image/png;base64,iVBORw0KGgoAAAANSUhEke02C1MyA29UWKgPA...RS12D==
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="links"&gt;Links&lt;a class="headerlink" href="#links" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Way&amp;nbsp;1 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="images"&gt;Images&lt;a class="headerlink" href="#images" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Way&amp;nbsp;1:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.  Open the file containing the Linux mascot.
+2.  Marvel at its beauty.
+
+    ![Tux, the Linux mascot](/assets/images/tux.png)
+
+3.  Close the file.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Way 2:Reference&amp;nbsp;style&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Here&amp;#39;s an image:
+
+![][image_ref_a32ff4ads]
+
+More text here...
+...
+
+[image_ref_a32ff4ads]: data:image/png;base64,iVBORw0KGgoAAAANSUhEke02C1MyA29UWKgPA...RS12D==
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="links"&gt;Links&lt;a class="headerlink" href="#links" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Way&amp;nbsp;1:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The Html output html looks like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;My favorite search engine is &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://duckduckgo.com&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Duck Duck Go&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Way 2: Reference&amp;nbsp;style &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends
+of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to
+eat: it was a [hobbit-hole][1], and that means comfort.
+
+[1]: &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;https:&lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="na"&gt;en&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;wikipedia&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="na"&gt;wiki&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;&lt;span class="na"&gt;Hobbit&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="na"&gt;Lifestyle&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &amp;quot;Hobbit lifestyles&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Way 3:Quick&amp;nbsp;links&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;https:&lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="na"&gt;www&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;markdownguide&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;fake&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="na"&gt;example&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>crawl base: pyppeteer handbook</title><link href="/crawl-base-pyppeteer-handbook" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-28:/crawl-base-pyppeteer-handbook</id><summary type="html">&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;运行JS脚本：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;dimensions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
+&lt;span class="s1"&gt;        return {&lt;/span&gt;
+&lt;span class="s1"&gt;            width: document.documentElement.clientWidth,&lt;/span&gt;
+&lt;span class="s1"&gt;            height: document.documentElement.clientHeight,&lt;/span&gt;
+&lt;span class="s1"&gt;            deviceScaleFactor: window.devicePixelRatio,&lt;/span&gt;
+&lt;span class="s1"&gt;        }&lt;/span&gt;
+&lt;span class="s1"&gt;    }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;结果：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# &amp;gt;&amp;gt;&amp;gt; {&amp;#39;width&amp;#39;: 800, &amp;#39;height&amp;#39;: 600, &amp;#39;deviceScaleFactor&amp;#39;: 1}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;举一反三：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;text_point_today&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
+&lt;span class="s1"&gt;            return document.getElementsByClassName(&amp;quot;buttonbox&amp;quot;)[0].textContent&lt;/span&gt;
+&lt;span class="s1"&gt;        }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;完整Example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyppeteer&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;launch&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;launch …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;运行JS脚本：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;dimensions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
+&lt;span class="s1"&gt;        return {&lt;/span&gt;
+&lt;span class="s1"&gt;            width: document.documentElement.clientWidth,&lt;/span&gt;
+&lt;span class="s1"&gt;            height: document.documentElement.clientHeight,&lt;/span&gt;
+&lt;span class="s1"&gt;            deviceScaleFactor: window.devicePixelRatio,&lt;/span&gt;
+&lt;span class="s1"&gt;        }&lt;/span&gt;
+&lt;span class="s1"&gt;    }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;结果：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# &amp;gt;&amp;gt;&amp;gt; {&amp;#39;width&amp;#39;: 800, &amp;#39;height&amp;#39;: 600, &amp;#39;deviceScaleFactor&amp;#39;: 1}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;举一反三：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;text_point_today&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
+&lt;span class="s1"&gt;            return document.getElementsByClassName(&amp;quot;buttonbox&amp;quot;)[0].textContent&lt;/span&gt;
+&lt;span class="s1"&gt;        }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;完整Example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyppeteer&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;launch&lt;/span&gt;
+
+&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;launch&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;newPage&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;goto&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://example.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;screenshot&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;path&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;example.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+
+    &lt;span class="n"&gt;dimensions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
+&lt;span class="s1"&gt;        return {&lt;/span&gt;
+&lt;span class="s1"&gt;            width: document.documentElement.clientWidth,&lt;/span&gt;
+&lt;span class="s1"&gt;            height: document.documentElement.clientHeight,&lt;/span&gt;
+&lt;span class="s1"&gt;            deviceScaleFactor: window.devicePixelRatio,&lt;/span&gt;
+&lt;span class="s1"&gt;        }&lt;/span&gt;
+&lt;span class="s1"&gt;    }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dimensions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# &amp;gt;&amp;gt;&amp;gt; {&amp;#39;width&amp;#39;: 800, &amp;#39;height&amp;#39;: 600, &amp;#39;deviceScaleFactor&amp;#39;: 1}&lt;/span&gt;
+    &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_event_loop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_until_complete&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="crawl"></category><category term="pyppeteer"></category><category term="Review"></category></entry><entry><title>crawl base: selector</title><link href="/crawl-base-selector" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-28:/crawl-base-selector</id><summary type="html">&lt;h2 id="css"&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt; 选择器参考手册&lt;a class="headerlink" href="#css" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;例子&lt;/th&gt;
+&lt;th&gt;例子描述&lt;/th&gt;
+&lt;th&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;.class&lt;/td&gt;
+&lt;td&gt;.intro&lt;/td&gt;
+&lt;td&gt;选择 class=&amp;#8221;intro&amp;#8221; 的所有元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;#id&lt;/td&gt;
+&lt;td&gt;#firstname&lt;/td&gt;
+&lt;td&gt;选择 id=&amp;#8221;firstname&amp;#8221; 的所有元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;选择所有元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element&lt;/td&gt;
+&lt;td&gt;p&lt;/td&gt;
+&lt;td&gt;选择所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element,element&lt;/td&gt;
+&lt;td&gt;div,p&lt;/td&gt;
+&lt;td&gt;选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element element&lt;/td&gt;
+&lt;td&gt;div p&lt;/td&gt;
+&lt;td&gt;选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element&amp;gt;element&lt;/td&gt;
+&lt;td&gt;div&amp;gt;p&lt;/td&gt;
+&lt;td&gt;选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素 …&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</summary><content type="html">&lt;h2 id="css"&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt; 选择器参考手册&lt;a class="headerlink" href="#css" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;选择器&lt;/th&gt;
+&lt;th&gt;例子&lt;/th&gt;
+&lt;th&gt;例子描述&lt;/th&gt;
+&lt;th&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;.class&lt;/td&gt;
+&lt;td&gt;.intro&lt;/td&gt;
+&lt;td&gt;选择 class=&amp;#8221;intro&amp;#8221; 的所有元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;#id&lt;/td&gt;
+&lt;td&gt;#firstname&lt;/td&gt;
+&lt;td&gt;选择 id=&amp;#8221;firstname&amp;#8221; 的所有元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;选择所有元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element&lt;/td&gt;
+&lt;td&gt;p&lt;/td&gt;
+&lt;td&gt;选择所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element,element&lt;/td&gt;
+&lt;td&gt;div,p&lt;/td&gt;
+&lt;td&gt;选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element element&lt;/td&gt;
+&lt;td&gt;div p&lt;/td&gt;
+&lt;td&gt;选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element&amp;gt;element&lt;/td&gt;
+&lt;td&gt;div&amp;gt;p&lt;/td&gt;
+&lt;td&gt;选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element+element&lt;/td&gt;
+&lt;td&gt;div+p&lt;/td&gt;
+&lt;td&gt;选择紧接在 &lt;div&gt; 元素之后的所有 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute]&lt;/td&gt;
+&lt;td&gt;[target]&lt;/td&gt;
+&lt;td&gt;选择带有 target 属性所有元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute=value]&lt;/td&gt;
+&lt;td&gt;[target=_blank]&lt;/td&gt;
+&lt;td&gt;选择 target=&amp;#8221;_blank&amp;#8221; 的所有元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute~=value]&lt;/td&gt;
+&lt;td&gt;[title~=flower]&lt;/td&gt;
+&lt;td&gt;选择 title 属性包含单词 &amp;#8220;flower&amp;#8221; 的所有元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute=value]&lt;/td&gt;
+&lt;td&gt;[lang=en]&lt;/td&gt;
+&lt;td&gt;选择 lang 属性值以 &amp;#8220;en&amp;#8221; 开头的所有元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:link&lt;/td&gt;
+&lt;td&gt;a:link&lt;/td&gt;
+&lt;td&gt;选择所有未被访问的链接。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:visited&lt;/td&gt;
+&lt;td&gt;a:visited&lt;/td&gt;
+&lt;td&gt;选择所有已被访问的链接。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:active&lt;/td&gt;
+&lt;td&gt;a:active&lt;/td&gt;
+&lt;td&gt;选择活动链接。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:hover&lt;/td&gt;
+&lt;td&gt;a:hover&lt;/td&gt;
+&lt;td&gt;选择鼠标指针位于其上的链接。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:focus&lt;/td&gt;
+&lt;td&gt;input:focus&lt;/td&gt;
+&lt;td&gt;选择获得焦点的 input 元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:first-letter&lt;/td&gt;
+&lt;td&gt;p:first-letter&lt;/td&gt;
+&lt;td&gt;选择每个 &lt;p&gt; 元素的首字母。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:first-line&lt;/td&gt;
+&lt;td&gt;p:first-line&lt;/td&gt;
+&lt;td&gt;选择每个 &lt;p&gt; 元素的首行。&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:first-child&lt;/td&gt;
+&lt;td&gt;p:first-child&lt;/td&gt;
+&lt;td&gt;选择属于父元素的第一个子元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:before&lt;/td&gt;
+&lt;td&gt;p:before&lt;/td&gt;
+&lt;td&gt;在每个 &lt;p&gt; 元素的内容之前插入内容。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:after&lt;/td&gt;
+&lt;td&gt;p:after&lt;/td&gt;
+&lt;td&gt;在每个 &lt;p&gt; 元素的内容之后插入内容。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:lang(language)&lt;/td&gt;
+&lt;td&gt;p:lang(it)&lt;/td&gt;
+&lt;td&gt;选择带有以 &amp;#8220;it&amp;#8221; 开头的 lang 属性值的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;element1~element2&lt;/td&gt;
+&lt;td&gt;p~ul&lt;/td&gt;
+&lt;td&gt;选择前面有 &lt;p&gt; 元素的每个 &lt;ul&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute^=value]&lt;/td&gt;
+&lt;td&gt;a[src^=&amp;#8221;https&amp;#8221;]&lt;/td&gt;
+&lt;td&gt;选择其 src 属性值以 &amp;#8220;https&amp;#8221; 开头的每个 &lt;a&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute$=value]&lt;/td&gt;
+&lt;td&gt;a[src$=&amp;#8221;.pdf&amp;#8221;]&lt;/td&gt;
+&lt;td&gt;选择其 src 属性以 &amp;#8220;.pdf&amp;#8221; 结尾的所有 &lt;a&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[attribute*=value]&lt;/td&gt;
+&lt;td&gt;a[src*=&amp;#8221;abc&amp;#8221;]&lt;/td&gt;
+&lt;td&gt;选择其 src 属性中包含 &amp;#8220;abc&amp;#8221; 子串的每个 &lt;a&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:first-of-type&lt;/td&gt;
+&lt;td&gt;p:first-of-type&lt;/td&gt;
+&lt;td&gt;选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:last-of-type&lt;/td&gt;
+&lt;td&gt;p:last-of-type&lt;/td&gt;
+&lt;td&gt;选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:only-of-type&lt;/td&gt;
+&lt;td&gt;p:only-of-type&lt;/td&gt;
+&lt;td&gt;选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:only-child&lt;/td&gt;
+&lt;td&gt;p:only-child&lt;/td&gt;
+&lt;td&gt;选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:nth-child(n)&lt;/td&gt;
+&lt;td&gt;p:nth-child(2)&lt;/td&gt;
+&lt;td&gt;选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:nth-last-child(n)&lt;/td&gt;
+&lt;td&gt;p:nth-last-child(2)&lt;/td&gt;
+&lt;td&gt;同上，从最后一个子元素开始计数。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:nth-of-type(n)&lt;/td&gt;
+&lt;td&gt;p:nth-of-type(2)&lt;/td&gt;
+&lt;td&gt;选择属于其父元素第二个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:nth-last-of-type(n)&lt;/td&gt;
+&lt;td&gt;p:nth-last-of-type(2)&lt;/td&gt;
+&lt;td&gt;同上，但是从最后一个子元素开始计数。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:last-child&lt;/td&gt;
+&lt;td&gt;p:last-child&lt;/td&gt;
+&lt;td&gt;选择属于其父元素最后一个子元素每个 &lt;p&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:root&lt;/td&gt;
+&lt;td&gt;:root&lt;/td&gt;
+&lt;td&gt;选择文档的根元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:empty&lt;/td&gt;
+&lt;td&gt;p:empty&lt;/td&gt;
+&lt;td&gt;选择没有子元素的每个 &lt;p&gt; 元素（包括文本节点）。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:target&lt;/td&gt;
+&lt;td&gt;#news:target&lt;/td&gt;
+&lt;td&gt;选择当前活动的 #news 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:enabled&lt;/td&gt;
+&lt;td&gt;input:enabled&lt;/td&gt;
+&lt;td&gt;选择每个启用的 &lt;input&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:disabled&lt;/td&gt;
+&lt;td&gt;input:disabled&lt;/td&gt;
+&lt;td&gt;选择每个禁用的 &lt;input&gt; 元素&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:checked&lt;/td&gt;
+&lt;td&gt;input:checked&lt;/td&gt;
+&lt;td&gt;选择每个被选中的 &lt;input&gt; 元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;:not(selector)&lt;/td&gt;
+&lt;td&gt;:not(p)&lt;/td&gt;
+&lt;td&gt;选择非 &lt;p&gt; 元素的每个元素。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;::selection&lt;/td&gt;
+&lt;td&gt;::selection&lt;/td&gt;
+&lt;td&gt;选择被用户选取的元素部分。&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;参考：
+http://www.w3school.com.cn/cssref/css_selectors.&lt;span class="caps"&gt;ASP&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>git handbook</title><link href="/git-handbook" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-22:/git-handbook</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Git windows&amp;nbsp;客户端安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_2"&gt;管理者&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;新建一个develop分支（from&amp;nbsp;master）http://172.19.13.51:8929/&lt;/li&gt;
+&lt;li&gt;为合作者新建一个合作者分支，如cjj&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。&lt;/p&gt;
+&lt;h2 id="_3"&gt;合作者&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Git global setup
+git config --global user.name &amp;quot;py&amp;quot;
+git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a new&amp;nbsp;repository&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@gitlab.library.gdufe.edu.cn …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Git windows&amp;nbsp;客户端安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="_2"&gt;管理者&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;新建一个develop分支（from&amp;nbsp;master）http://172.19.13.51:8929/&lt;/li&gt;
+&lt;li&gt;为合作者新建一个合作者分支，如cjj&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。&lt;/p&gt;
+&lt;h2 id="_3"&gt;合作者&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Git global setup
+git config --global user.name &amp;quot;py&amp;quot;
+git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Create a new&amp;nbsp;repository&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+cd ve3_smartkits
+touch README.md
+git add README.md
+git commit -m &amp;quot;add README&amp;quot;
+git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Existing&amp;nbsp;folder&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd existing_folder
+git init
+git remote add origin git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+git add .
+git commit -m &amp;quot;Initial commit&amp;quot;
+git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Existing Git&amp;nbsp;repository&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd existing_repo
+git remote rename origin old-origin
+git remote add origin git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+git push -u origin --all
+git push -u origin --tags
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以项目 http://172.19.13.51:8929/pengyan/dl_documents 合作为例：
+1. 安装Git &lt;br /&gt;
+2. Git global&amp;nbsp;setup     &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global user.name &amp;quot;py&amp;quot;
+git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;对于需要用Key认证的，先配置。In ~/.ssh/config, add:&amp;nbsp;(如果不是默认22，指定Port很重要)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;host gitlab.library.gdufe.edu.cn
+  HostName 172.19.13.51
+  Port 2289
+  IdentityFile  E:/OneDrive/privates/#keys/Identity-gitlib-openssh
+  User pengyan
+host git-2
+  HostName 172.19.13.51
+  Port 2289
+  IdentityFile  E:/OneDrive/privates/#keys/Identity-gitlib-openssh
+  User pengyan
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Create a new&amp;nbsp;repository    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd my_work_place
+git clone git@gitlab.library.gdufe.edu.cn:pengyan/dl_documents.git
+cd dl_documents
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_4"&gt;常用操作&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;查看有什么分支    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git branch
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;这个命令的意思就是拉取远程的一个叫develop的分支，并在本地创建一个叫develop的分支和远程的分支匹配。    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch origin develop:develop
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;拉取自己的分支    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch origin xzl:xzl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;每个人的所有开发工作都只在自己的分支开发。例如小谢开发，你就在本地切换到自己的xzl分支然后进行开发。   &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout xzl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;每个人只允许在自己的分支直接push远程分支。    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;touch README.md
+git add README.md
+git commit -m &amp;quot;add README&amp;quot;
+git push -u origin xzl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_5"&gt;合并的时候必须遵循以下条件&lt;a class="headerlink" href="#_5" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;a)&amp;nbsp;首先，本地切换到develop分支    &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout develop
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;b) pull&amp;nbsp;develop分支最新内容到本地      &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git pull origin develop   
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;c)&amp;nbsp;保证develop最新前提下合并自己的分支xzl   &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git merge xzl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;d) 如果出现conflict那么清除conflict之后，commit.然后把本地develop push&amp;nbsp;到远程的develop.每完成一个功能就提交一次。不要累计代码。    &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add README.md
+git commit -m &amp;quot;add README&amp;quot;
+git merge xzl
+git push -u origin develop
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>github quick start</title><link href="/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
+Get started by creating a new file or uploading an existing file. We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
+Get started by creating a new file or uploading an existing file. We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy&amp;quot; &amp;gt;&amp;gt; README.md
+git init
+git add README.md
+git commit -m &amp;quot;first commit&amp;quot;
+git remote add origin https://github.com/yupengyan/ve3_scrapy.git
+git push -u origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;or push an existing repository from the command&amp;nbsp;line&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd existing_repo
+git remote rename origin old-origin
+git remote add origin https://github.com/yupengyan/ve3_scrapy.git
+git push -u origin master
+or 
+git push -u origin --all
+or 
+git push -u origin --tags
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>math for AI</title><link href="/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第1章 高等数学&lt;br /&gt;
+1.1 导数和偏导数&lt;br /&gt;
+1.2 梯度向量  &lt;br /&gt;
+1.3 极值定理 &lt;br /&gt;
+1.4 Jacobbi矩阵 &lt;br /&gt;
+1.5 Hessian矩阵 &lt;br /&gt;
+1.6 泰勒展开公式 &lt;br /&gt;
+1.7 拉格朗日乘数法 &lt;br /&gt;
+第2章 线性代数 &lt;br /&gt;
+2.1 向量及其运算 &lt;br /&gt;
+2.2 范数 &lt;br /&gt;
+2.3 矩阵及其运算 &lt;br /&gt;
+2.4 逆矩阵 &lt;br /&gt;
+2.5 二次型 &lt;br /&gt;
+2.6 矩阵的正定性 &lt;br /&gt;
+2.7 矩阵的特征值与特征向量 &lt;br /&gt;
+2.8 矩阵的奇异值分解 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第1章 高等数学&lt;br /&gt;
+1.1 导数和偏导数&lt;br /&gt;
+1.2 梯度向量  &lt;br /&gt;
+1.3 极值定理 &lt;br /&gt;
+1.4 Jacobbi矩阵 &lt;br /&gt;
+1.5 Hessian矩阵 &lt;br /&gt;
+1.6 泰勒展开公式 &lt;br /&gt;
+1.7 拉格朗日乘数法 &lt;br /&gt;
+第2章 线性代数 &lt;br /&gt;
+2.1 向量及其运算 &lt;br /&gt;
+2.2 范数 &lt;br /&gt;
+2.3 矩阵及其运算 &lt;br /&gt;
+2.4 逆矩阵 &lt;br /&gt;
+2.5 二次型 &lt;br /&gt;
+2.6 矩阵的正定性 &lt;br /&gt;
+2.7 矩阵的特征值与特征向量 &lt;br /&gt;
+2.8 矩阵的奇异值分解 &lt;br /&gt;
+第3章 概率论 &lt;br /&gt;
+3.1 概率、随机事件和随机变量 &lt;br /&gt;
+3.2 条件概率与贝叶斯公式  &lt;br /&gt;
+3.3 常用的概率分布 &lt;br /&gt;
+3.4 随机变量的均值和方差、协方差 &lt;br /&gt;
+3.5 最大似然估计 &lt;br /&gt;
+第4章 最优化 &lt;br /&gt;
+4.1 凸集、凸函数 &lt;br /&gt;
+4.2 凸优化问题的标准形式 &lt;br /&gt;
+4.3&amp;nbsp;线性规划问题   &lt;/p&gt;
+&lt;h2 id="_1"&gt;优化论初步&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  优化迭代法统一论 &lt;br /&gt;
+1.0  本微专业概述 &lt;br /&gt;
+1.1  线性回归建模 &lt;br /&gt;
+1.2  无约束优化梯度分析法（上） &lt;br /&gt;
+1.3  无约束优化梯度分析法（下） &lt;br /&gt;
+1.4  无约束迭代法 &lt;br /&gt;
+1.5  线性回归求解 &lt;br /&gt;
+1.6&amp;nbsp;案例分析    &lt;/p&gt;
+&lt;p&gt;第二章  深度学习反向传播 &lt;br /&gt;
+2.1  回归与分类、神经网络 &lt;br /&gt;
+2.2  BP算法（上） &lt;br /&gt;
+2.3  BP算法（下） &lt;br /&gt;
+2.4&amp;nbsp;计算图   &lt;/p&gt;
+&lt;h2 id="_2"&gt;优化论进阶&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  凸优化基础 &lt;br /&gt;
+1.1  一般优化问题 &lt;br /&gt;
+1.2  凸集和凸函数基础（上） &lt;br /&gt;
+1.3  凸集和凸函数基础（下） &lt;br /&gt;
+1.4  凸优化问题  &lt;br /&gt;
+1.5&amp;nbsp;案例分析   &lt;/p&gt;
+&lt;p&gt;第二章  凸优化进阶之对偶理论 &lt;br /&gt;
+2.1  凸优化问题 &lt;br /&gt;
+2.2  对偶（上） &lt;br /&gt;
+2.3  对偶（下） &lt;br /&gt;
+2.4&amp;nbsp;问题案例   &lt;/p&gt;
+&lt;p&gt;第三章  &lt;span class="caps"&gt;SVM&lt;/span&gt; &lt;br /&gt;
+3.1  问题案例 &lt;br /&gt;
+3.2  &lt;span class="caps"&gt;SVM&lt;/span&gt; 建模 &lt;br /&gt;
+3.3  &lt;span class="caps"&gt;SVM&lt;/span&gt; 求解 &lt;br /&gt;
+3.4  &lt;span class="caps"&gt;SVM&lt;/span&gt;&amp;nbsp;扩展，附案例   &lt;/p&gt;
+&lt;h2 id="_3"&gt;数据降维的艺术&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  矩阵分析上篇  &lt;br /&gt;
+1.1  矩阵与张量 &lt;br /&gt;
+1.2  可逆矩阵 &lt;br /&gt;
+1.3  线性相关 &lt;br /&gt;
+1.4  子空间 &lt;br /&gt;
+1.5  范数 &lt;br /&gt;
+1.6 特殊矩阵和特征分解 &lt;br /&gt;
+案例：&lt;span class="caps"&gt;PCA&lt;/span&gt;&amp;nbsp;数据降维   &lt;/p&gt;
+&lt;p&gt;第二章  矩阵分析下篇  &lt;br /&gt;
+2.1  &lt;span class="caps"&gt;SVD&lt;/span&gt; &lt;br /&gt;
+2.2  &lt;span class="caps"&gt;SVD&lt;/span&gt; 与特征分解关系 &lt;br /&gt;
+2.3  图像压缩 &lt;br /&gt;
+2.4  伪逆 &lt;br /&gt;
+2.5  迹与行列式 &lt;br /&gt;
+案例：&lt;span class="caps"&gt;SVD&lt;/span&gt;&amp;nbsp;对图像进行压缩   &lt;/p&gt;
+&lt;h2 id="_4"&gt;统计推断的魅力&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;第一章  概率统计上篇  &lt;br /&gt;
+1.1  事件 &lt;br /&gt;
+1.2  随机变量 &lt;br /&gt;
+1.3  概率与条件概率 &lt;br /&gt;
+1.4  贝叶斯定理 &lt;br /&gt;
+1.5  朴素贝叶斯 &lt;br /&gt;
+1.6  期望、方差、协方差 &lt;br /&gt;
+1.7  最大似然、最大后验 &lt;br /&gt;&amp;nbsp;案例：垃圾邮件过滤   &lt;/p&gt;
+&lt;p&gt;第二章  概率统计中篇 &lt;br /&gt;
+2.1  常见分布总结 &lt;br /&gt;
+2.2  最大似然与贝叶斯的关系 &lt;br /&gt;
+2.3  熵与互信息 &lt;br /&gt;&amp;nbsp;案例：最大似然估计   &lt;/p&gt;
+&lt;p&gt;第三章  概率统计下篇 &lt;br /&gt;
+3.1  以 &lt;span class="caps"&gt;GMM&lt;/span&gt; 为例的统计建模 &lt;br /&gt;
+3.2  &lt;span class="caps"&gt;EM&lt;/span&gt; 算法  &lt;br /&gt;
+案例：&lt;span class="caps"&gt;GMM&lt;/span&gt;&amp;nbsp;实践   &lt;/p&gt;</content></entry><entry><title>Build a blog with hexo</title><link href="/build-a-blog-with-hexo" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/build-a-blog-with-hexo</id><summary type="html">&lt;h1 id="node"&gt;安装node&lt;a class="headerlink" href="#node" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在Windows下，从 https://nodejs.org/en/&amp;nbsp;下载以.msi为扩展名的安装包，如果不需要进行node相关开发的话，选LTS版本就够用了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在Ubuntu下，可以利用nvm装node&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash # 安装nvm
+nvm install node  # 安装最新版本node
+nvm ls            # 查看已安装的版本
+nvm use node      # 使用node
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;安装hexo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g hexo-cli
+npm install hexo-deployer-git --save # 安装部署站点的node功能包，hexo …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1 id="node"&gt;安装node&lt;a class="headerlink" href="#node" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;在Windows下，从 https://nodejs.org/en/&amp;nbsp;下载以.msi为扩展名的安装包，如果不需要进行node相关开发的话，选LTS版本就够用了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在Ubuntu下，可以利用nvm装node&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash # 安装nvm
+nvm install node  # 安装最新版本node
+nvm ls            # 查看已安装的版本
+nvm use node      # 使用node
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;安装hexo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g hexo-cli
+npm install hexo-deployer-git --save # 安装部署站点的node功能包，hexo deploy命令需要
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;建立站点仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hexo init blog # 初始化一个站点目录
+cd blog
+npm install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;配置站点&amp;nbsp;一般hexo初始化后的站点目录结构如下&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/blog
+ |-- _config.yml # 站点配置文件
+ |-- scaffolds   # 页面模板存放的目录
+ |      |-- post.html # 博文模板
+ |      |-- page.html # 分页模板
+ |      \-- draft.html # 草稿模板
+ |-- source         # 博文源文件目录
+ |      |-- _posts  # 存放博文的目录
+ |      \-- _drafts # 存放草稿的目录
+ |-- themes      # 存放主题文件夹的目录
+ |-- package.json
+ |-- node_modules # 功能依赖包
+ \-- .gitignore   # push的时候忽略node_modules文件夹等
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;修改_config.yml文件，整个站点的配置主要是在这个文件中修改&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;博客名&lt;/span&gt;
+&lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;博客简述&lt;/span&gt;
+&lt;span class="n"&gt;author&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;作者名&lt;/span&gt;
+&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;)://&lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;site&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/your/project/path or /&lt;/span&gt;
+
+&lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+  &lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;
+  &lt;span class="n"&gt;repo&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;userName&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;git&lt;/span&gt;
+  &lt;span class="n"&gt;branch&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;gh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;
+  &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="err"&gt;自定义的提交信息&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;撰写博文&amp;nbsp;每当需要撰写心得博文时，只需要执行以下命令，就可以得到一个标题和日期已经设置好的markdown文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;hexo new [layout] &amp;#8216;博文标题&amp;#8217; # layout是可选项，表示使用哪种模板来创建页面文件，默认是post&amp;nbsp;博文结构的头部&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;博文标题&lt;/span&gt;
+&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;yyyy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mm&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;dd&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;日期是创建博文源文件时自动生成的&lt;/span&gt;
+&lt;span class="n"&gt;categories&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;category1&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;category2&lt;/span&gt;
+&lt;span class="n"&gt;tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;tag1&lt;/span&gt;
+&lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;tag2&lt;/span&gt;
+&lt;span class="n"&gt;comments&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;做好源文件的版本控制
+由于hexo是自动将站点文件自动部署到GitHub&amp;nbsp;Pages上的，所以不需要自己另外push，但是建立生成站点页面的分支，还是有必要的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git init
+git remote add origin git@github.com:userName/blog.git # 与你的github blog仓库建立联系
+git checkout --orphan source
+git push origin source
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;部署站点&amp;nbsp;hexo的站点部署很简单&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hexo g # 生成编译后的静态站点文件
+hexo d # 部署到远程仓库
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;或者可以结合起来，生成静态文件后直接部署，下面两条命令使用一条即可&lt;/p&gt;
+&lt;p&gt;hexo g -d # 生成后部署
+hexo d -g #&amp;nbsp;部署前生成&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以后每次有新的文章发布，只需要如下操作&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;hexo new &amp;#8216;博文标题&amp;#8217;
+hexo g&amp;nbsp;-d&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;常用hexo命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hexo init &amp;lt;站点仓库的目录&amp;gt; # 初始化一个站点目录
+hexo clean # 用于主题切换等涉及站点整体布局效果改变的行为时，清楚hexo原有缓存
+hexo new &amp;#39;博文标题&amp;#39; # 新增一篇博文
+hexo generate # 可简写为 hexo g ，编译生成静态页面文件
+hexo server # 可简写为 hexo s ，开启本地服务器预览与测试编译生成的静态页面效果
+hexo delpoy # 可简写为 hexo d ，部署站点到远程仓库
+hexo generate -d # 可简写为 hexo g -d ，编译生成静态页面文件并部署到远程仓库
+hexo deploy -g # 可简写为 hexo d -g ，同上
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;修改主题
+从hexo&amp;nbsp;themes找到何意的主题，clone下来，放到站点本地仓库的themes目录下，修改_config.yml文件的theme字段为对应的主题名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;theme: light
+更多插件等功能，建议去hexo&amp;nbsp;官网查看。&lt;/p&gt;</content></entry><entry><title>firewalld handbook</title><link href="/firewalld-handbook" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/firewalld-handbook</id><summary type="html">&lt;h1 id="cmd"&gt;cmd&lt;a class="headerlink" href="#cmd" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;systemctl enable firewalld
+systemctl disable firewalld
+systemctl start firewalld
+systemctl stop firewalld
+systemctl status firewalld
+
+firewall-cmd --list-all
+firewall-cmd --permanent --zone=public --add-port=5000/tcp
+firewall-cmd --reload
+
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+firewall-cmd --permanent --zone=public --add-port=443/tcp
+&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h1 id="cmd"&gt;cmd&lt;a class="headerlink" href="#cmd" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;systemctl enable firewalld
+systemctl disable firewalld
+systemctl start firewalld
+systemctl stop firewalld
+systemctl status firewalld
+
+firewall-cmd --list-all
+firewall-cmd --permanent --zone=public --add-port=5000/tcp
+firewall-cmd --reload
+
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+firewall-cmd --permanent --zone=public --add-port=443/tcp
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>mongodb handbook</title><link href="/mongodb-handbook" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/mongodb-handbook</id><summary type="html">&lt;h2 id="_1"&gt;时间格式的查询&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;datetime满足大于xxx时间：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{&amp;#39;datetime&amp;#39;:{&amp;#39;$gte&amp;#39;:{&amp;quot;$date&amp;quot;:&amp;quot;2018-11-01T05:36:45Z&amp;quot;}}}
+&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;时间格式的查询&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;datetime满足大于xxx时间：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{&amp;#39;datetime&amp;#39;:{&amp;#39;$gte&amp;#39;:{&amp;quot;$date&amp;quot;:&amp;quot;2018-11-01T05:36:45Z&amp;quot;}}}
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>web server protect</title><link href="/web-server-protect" rel="alternate"></link><published>2019-01-17T09:31:00+08:00</published><updated>2019-01-17T09:31:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2019-01-17:/web-server-protect</id><summary type="html">&lt;h2 id="_1"&gt;检测连接：&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -nt | grep your_server_ip | awk &amp;#39;{print $5}&amp;#39; | awk -F&amp;quot;:&amp;quot; &amp;#39;{print $1}&amp;#39;| sort | uniq -c | sort -r -n
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]# netstat -nt | grep 202.116.48.23:80 | awk &amp;#39;{print $5}&amp;#39; | awk -F&amp;quot;:&amp;quot; &amp;#39;{print $1}&amp;#39;| sort | uniq -c | sort -r -n
+27 172.28.48.22
+22 172 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;检测连接：&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;netstat -nt | grep your_server_ip | awk &amp;#39;{print $5}&amp;#39; | awk -F&amp;quot;:&amp;quot; &amp;#39;{print $1}&amp;#39;| sort | uniq -c | sort -r -n
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]# netstat -nt | grep 202.116.48.23:80 | awk &amp;#39;{print $5}&amp;#39; | awk -F&amp;quot;:&amp;quot; &amp;#39;{print $1}&amp;#39;| sort | uniq -c | sort -r -n
+27 172.28.48.22
+22 172.28.48.89
+9 42.236.99.206
+9 42.236.54.2
+8 42.236.99.72
+8 220.243.136.188
+7 220.243.136.62
+7 220.243.135.125
+6 42.236.99.86
+6 42.236.99.194
+6 42.236.54.22
+6 220.243.136.251
+6 220.243.135.62
+6 220.243.135.251
+5 42.236.99.79
+5 42.236.99.166
+5 220.243.136.125
+5 220.243.135.155
+5 220.243.135.104
+4 42.236.99.44
+4 42.236.54.62
+4 42.236.46.85
+4 42.236.102.23
+4 220.243.136.29
+4 220.243.135.92
+4 220.243.135.29
+4 117.122.222.180
+3 42.236.99.16
+3 42.236.99.130
+3 42.236.12.150
+3 42.236.12.130
+3 42.236.103.66
+3 220.243.136.78
+3 220.243.136.41
+3 220.243.136.15
+3 220.243.135.44
+3 220.243.135.41
+3 220.243.135.218
+3 220.243.135.204
+3 220.243.135.167
+3 220.243.135.162
+3 139.217.198.91
+2 42.236.99.65
+2 42.236.99.30
+2 42.236.102.3
+2 42.236.101.214
+2 220.243.136.218
+2 220.243.136.170
+2 220.243.136.104
+2 220.243.135.230
+2 220.243.135.188
+2 139.217.199.91
+2 139.217.199.33
+1 61.151.178.197
+1 54.223.119.62
+1 52.83.254.182
+1 52.83.219.14
+1 52.81.11.30
+1 50.35.31.142
+1 42.236.99.2
+1 42.236.99.154
+1 42.236.99.142
+1 42.236.12.190
+1 42.236.10.89
+1 42.236.10.71
+1 42.236.101.234
+1 220.243.136.92
+1 220.243.136.80
+1 220.243.136.4
+1 220.243.136.233
+1 220.243.136.230
+1 220.243.136.225
+1 220.243.136.204
+1 220.243.136.17
+1 220.243.136.162
+1 220.243.136.155
+1 220.243.136.141
+1 220.243.136.130
+1 220.243.135.99
+1 220.243.135.67
+1 220.243.135.233
+1 220.243.135.184
+1 220.243.135.164
+1 220.243.135.15
+1 220.243.135.143
+1 220.243.135.107
+1 14.16.108.88
+1 139.219.1.232
+1 139.217.197.212
+1 139.217.197.175
+1 139.217.196.231
+1 13.66.139.0
+1 125.88.223.58
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;220.243.135.0&amp;nbsp;这类规律性的IP可能就是爬虫了&amp;#8230;可以用Haprox等web应用服务器block,也可以用防火墙block，当然也有可能是搜索引擎，block前搞清楚。&lt;/p&gt;
+&lt;h2 id="_2"&gt;处理&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;放入防火墙拒绝   &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;firewall-cmd --permanent --add-rich-rule=&amp;quot;rule family=&amp;#39;ipv4&amp;#39; source address=&amp;#39;180.76.15/24&amp;#39; reject&amp;quot;
+firewall-cmd --reload
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;放入haproxy黑名单 &lt;br /&gt;
+haproxy.cfg frontend&amp;nbsp;放入：  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="c1"&gt;# Black list ######&lt;/span&gt;
+    &lt;span class="na"&gt;acl bad_ip src -f /usr/local/etc/haproxy/block-ip.txt&lt;/span&gt;
+    &lt;span class="na"&gt;tcp-request connection reject if bad_ip&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;block-ip.txt&amp;nbsp;放入ip地址：   &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;220.243.135.0/24&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@localhost docker_haproxy]# vi block-ip.txt
+180.163.228.0/24
+180.163.227.0/24
+180.163.226.0/24
+180.163.225.0/24
+42.236.99.0/24
+42.236.10.0/24
+&lt;/pre&gt;&lt;/div&gt;</content><category term="haproxy"></category><category term="safe"></category><category term="Server"></category></entry><entry><title>docker errors</title><link href="/docker-errors" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/docker-errors</id><summary type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="host-mapping-homedatadv_haproxy-has-no-effect"&gt;Host mapping &amp;#8220;/home/data/dv_haproxy&amp;#8221; has no effect&lt;a class="headerlink" href="#host-mapping-homedatadv_haproxy-has-no-effect" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;https://111qqz.com/2018/11/%E8%&lt;span class="caps"&gt;AE&lt;/span&gt;%B0%E4%B8%80%E6%&lt;span class="caps"&gt;AC&lt;/span&gt;%A1%E5%9C%A8-docker-compose-%E4%B8%&lt;span class="caps"&gt;AD&lt;/span&gt;%E4%&lt;span class="caps"&gt;BD&lt;/span&gt;%&lt;span class="caps"&gt;BF&lt;/span&gt;%E7%94%A8volume%E7%9A%84%E8%B8%A9%E5%9D%91%E8%&lt;span class="caps"&gt;AE&lt;/span&gt;%B0%E5 …&lt;/p&gt;</summary><content type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="host-mapping-homedatadv_haproxy-has-no-effect"&gt;Host mapping &amp;#8220;/home/data/dv_haproxy&amp;#8221; has no effect&lt;a class="headerlink" href="#host-mapping-homedatadv_haproxy-has-no-effect" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;https://111qqz.com/2018/11/%E8%&lt;span class="caps"&gt;AE&lt;/span&gt;%B0%E4%B8%80%E6%&lt;span class="caps"&gt;AC&lt;/span&gt;%A1%E5%9C%A8-docker-compose-%E4%B8%&lt;span class="caps"&gt;AD&lt;/span&gt;%E4%&lt;span class="caps"&gt;BD&lt;/span&gt;%&lt;span class="caps"&gt;BF&lt;/span&gt;%E7%94%A8volume%E7%9A%84%E8%B8%A9%E5%9D%91%E8%&lt;span class="caps"&gt;AE&lt;/span&gt;%B0%E5%&lt;span class="caps"&gt;BD&lt;/span&gt;%95/&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;docker-compose.yml中定义的volumes无效：&lt;/span&gt;
+
+
+&lt;span class="na"&gt;WARNING: Service &amp;quot;https&amp;quot; is using volume &amp;quot;/var/spool/cron/cronstamps&amp;quot; from the previous container. Host mapping &amp;quot;/home/data/dv_haproxy&amp;quot; has no effect. Remove the existing containers (with `docker-compose rm https`) to use the host volume mapping.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;解决方案：
+1.不手动创建volume，而是在docker-compose.yml中，设置volume的mountpoint
+2.在docker-compose.yml中，添加external: true的选项到 volume中，参考external&amp;nbsp;https://docs.docker.com/compose/compose-file/#external&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;version: &amp;#39;3&amp;#39;&lt;/span&gt;
+&lt;span class="na"&gt;services:&lt;/span&gt;
+  &lt;span class="na"&gt;django:&lt;/span&gt;
+    &lt;span class="na"&gt;image: &amp;quot;registry.sensetime.com/spider/sensespider:v1.0&amp;quot;&lt;/span&gt;
+    &lt;span class="na"&gt;volumes:&lt;/span&gt;
+      &lt;span class="na"&gt;- spiderdata:/data&lt;/span&gt;
+    &lt;span class="na"&gt;privileged: true &lt;/span&gt;
+    &lt;span class="na"&gt;ports:&lt;/span&gt;
+      &lt;span class="na"&gt;- &amp;quot;8000:8000&amp;quot;&lt;/span&gt;
+    &lt;span class="na"&gt;working_dir: /home/renkuanze/workspace/sensespider&lt;/span&gt;
+    &lt;span class="na"&gt;entrypoint: bash run.sh&lt;/span&gt;
+    &lt;span class="na"&gt;tty: true&lt;/span&gt;
+    &lt;span class="na"&gt;container_name: django&lt;/span&gt;
+
+  &lt;span class="na"&gt;splash: &lt;/span&gt;
+    &lt;span class="na"&gt;image: &amp;quot;scrapinghub/splash&amp;quot;&lt;/span&gt;
+    &lt;span class="na"&gt;container_name: splash&lt;/span&gt;
+    &lt;span class="na"&gt;network_mode: &amp;quot;service:django&amp;quot;&lt;/span&gt;
+&lt;span class="na"&gt;volumes:&lt;/span&gt;
+  &lt;span class="na"&gt;spiderdata:&lt;/span&gt;
+    &lt;span class="na"&gt;driver: local-persist&lt;/span&gt;
+    &lt;span class="na"&gt;driver_opts:&lt;/span&gt;
+      &lt;span class="na"&gt;mountpoint: /data/spider_data&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;[root@localhost gitlab]# docker restart gitlab
+Error response from daemon: Cannot restart container gitlab: oci runtime error: container with id exists:&amp;nbsp;ff85edf195f77b5415f1089c81d7d51759e04f4875dd2b224262d189f3c50e3e&lt;/p&gt;</content></entry><entry><title>docker handbook</title><link href="/docker-handbook" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/docker-handbook</id><summary type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo docker build -t ubuntu_precise/galera:codership .
+docker build -f Dockerfile-py2 -t webapp .
+
+docker build  -t haproxy .
+
+docker run -d -p &lt;span class="m"&gt;80&lt;/span&gt;:80 webapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker run --name some-mariadb -v /my/custom:/etc/mysql/conf.d -e &lt;span class="nv"&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;my-secret-pw -d mariadb:tag
+$ docker &lt;span class="nb"&gt;exec&lt;/span&gt; some-mariadb sh -c &lt;span class="s1"&gt;&amp;#39;exec …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="build-the-image"&gt;Build the image:&lt;a class="headerlink" href="#build-the-image" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ sudo docker build -t ubuntu_precise/galera:codership .
+docker build -f Dockerfile-py2 -t webapp .
+
+docker build  -t haproxy .
+
+docker run -d -p &lt;span class="m"&gt;80&lt;/span&gt;:80 webapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker run --name some-mariadb -v /my/custom:/etc/mysql/conf.d -e &lt;span class="nv"&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;my-secret-pw -d mariadb:tag
+$ docker &lt;span class="nb"&gt;exec&lt;/span&gt; some-mariadb sh -c &lt;span class="s1"&gt;&amp;#39;exec mysqldump --all-databases -uroot -p&amp;quot;$MYSQL_ROOT_PASSWORD&amp;quot;&amp;#39;&lt;/span&gt; &amp;gt; /some/path/on/your/host/all-databases.sql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Build and&amp;nbsp;run&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker run --name some-mariadb -p 3306:3306  --restart=on-failure:5  -v /home/data/syncthing/data/docker-data/mariadb/conf/:/etc/mysql/conf.d -v /home/data/syncthing/data/docker-data/mariadb/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=tsg#mysqlDB6916 -d mariadb:latest
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;调出Docker的命令行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker exec -it some-mariadb bash
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;firewall-cmd --permanent --add-port=3306/tcp
+firewall-cmd --reload
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="install"&gt;Install&lt;a class="headerlink" href="#install" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@mysql yum.repos.d]# yum install -y docker-ce-17.09.0.ce
+sudo systemctl start docker
+sudo  systemctl enable docker
+ docker run hello-world
+ ```
+
+https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;docker run -e &lt;span class="caps"&gt;MYVAR1&lt;/span&gt; &amp;#8212;env &lt;span class="caps"&gt;MYVAR2&lt;/span&gt;=foo &amp;#8212;env-file ./env.list ubuntu bash&amp;nbsp;&amp;#8220;`&lt;/p&gt;</content></entry><entry><title>docker’s installation in CentOS7</title><link href="/dockers-installation-in-centos7" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/dockers-installation-in-centos7</id><summary type="html">&lt;h2 id="install-docker"&gt;install Docker&lt;a class="headerlink" href="#install-docker" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+
+
+curl -sSL https://get.docker.com/ | sh
+yum install -y docker-compose
+
+
+$ curl -fsSL get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh --mirror Aliyun
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;/etc/systemd/system/containerd.service.d&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Unit]&lt;/span&gt;
+&lt;span class="na"&gt;Description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Docker Application Container …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="install-docker"&gt;install Docker&lt;a class="headerlink" href="#install-docker" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+
+
+curl -sSL https://get.docker.com/ | sh
+yum install -y docker-compose
+
+
+$ curl -fsSL get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh --mirror Aliyun
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;/etc/systemd/system/containerd.service.d&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;[Unit]&lt;/span&gt;
+&lt;span class="na"&gt;Description&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;Docker Application Container Engine&lt;/span&gt;
+&lt;span class="na"&gt;Documentation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;https://docs.docker.com&lt;/span&gt;
+&lt;span class="na"&gt;BindsTo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;containerd.service&lt;/span&gt;
+&lt;span class="na"&gt;After&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;network-online.target firewalld.service&lt;/span&gt;
+&lt;span class="na"&gt;Wants&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;network-online.target&lt;/span&gt;
+
+&lt;span class="k"&gt;[Service]&lt;/span&gt;
+&lt;span class="na"&gt;Type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;notify&lt;/span&gt;
+&lt;span class="c1"&gt;# the default is not to use systemd for cgroups because the delegate issues still&lt;/span&gt;
+&lt;span class="c1"&gt;# exists and systemd currently does not support the cgroup feature set required&lt;/span&gt;
+&lt;span class="c1"&gt;# for containers run by docker&lt;/span&gt;
+&lt;span class="na"&gt;ExecStart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;/usr/bin/dockerd -H unix://&lt;/span&gt;
+&lt;span class="na"&gt;ExecReload&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;/bin/kill -s HUP $MAINPID&lt;/span&gt;
+&lt;span class="na"&gt;TimeoutSec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;0&lt;/span&gt;
+&lt;span class="na"&gt;RestartSec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;2&lt;/span&gt;
+&lt;span class="na"&gt;Restart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;always&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Note that StartLimit* options were moved from &amp;quot;Service&amp;quot; to &amp;quot;Unit&amp;quot; in systemd 229.&lt;/span&gt;
+&lt;span class="c1"&gt;# Both the old, and new location are accepted by systemd 229 and up, so using the old location&lt;/span&gt;
+&lt;span class="c1"&gt;# to make them work for either version of systemd.&lt;/span&gt;
+&lt;span class="na"&gt;StartLimitBurst&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;3&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Note that StartLimitInterval was renamed to StartLimitIntervalSec in systemd 230.&lt;/span&gt;
+&lt;span class="c1"&gt;# Both the old, and new name are accepted by systemd 230 and up, so using the old name to make&lt;/span&gt;
+&lt;span class="c1"&gt;# this option work for either version of systemd.&lt;/span&gt;
+&lt;span class="na"&gt;StartLimitInterval&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;60s&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Having non-zero Limit*s causes performance problems due to accounting overhead&lt;/span&gt;
+&lt;span class="c1"&gt;# in the kernel. We recommend using cgroups to do container-local accounting.&lt;/span&gt;
+&lt;span class="na"&gt;LimitNOFILE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;infinity&lt;/span&gt;
+&lt;span class="na"&gt;LimitNPROC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;infinity&lt;/span&gt;
+&lt;span class="na"&gt;LimitCORE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;infinity&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Comment TasksMax if your systemd version does not supports it.&lt;/span&gt;
+&lt;span class="c1"&gt;# Only systemd 226 and above support this option.&lt;/span&gt;
+&lt;span class="na"&gt;TasksMax&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;infinity&lt;/span&gt;
+
+&lt;span class="c1"&gt;# set delegate yes so that systemd does not reset the cgroups of docker containers&lt;/span&gt;
+&lt;span class="na"&gt;Delegate&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;yes&lt;/span&gt;
+
+&lt;span class="c1"&gt;# kill only the docker process, not all processes in the cgroup&lt;/span&gt;
+&lt;span class="na"&gt;KillMode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;process&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="errors"&gt;Errors&lt;a class="headerlink" href="#errors" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;docker: Error response from daemon: &lt;span class="caps"&gt;OCI&lt;/span&gt; runtime create failed: unable to retrieve &lt;span class="caps"&gt;OCI&lt;/span&gt; runtime error (open /run/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/e2b1c3db53f33b6027eb4f644429aeb1eee4b0096d7f76686f7ce88f12019062/log.json: no such file or directory): runc did not terminate sucessfully:&amp;nbsp;unknown.&lt;/p&gt;
+&lt;p&gt;I have the same problem. Installing an older docker-ce should&amp;nbsp;work.&lt;/p&gt;
+&lt;p&gt;cat /etc/centos-release
+CentOS Linux release 7.1.1503&amp;nbsp;(Core) &lt;/p&gt;
+&lt;p&gt;yum install docker-ce-17.06.1.ce
+systemctl start docker
+docker pull&amp;nbsp;nginx&lt;/p&gt;
+&lt;p&gt;[root@Haproxy docker-haproxy-certbot]# cat /etc/centos-release
+CentOS Linux release 7.6.1810 (Core) 
+[root@Haproxy docker-haproxy-certbot]# docker -v
+Docker version 18.09.0, build&amp;nbsp;4d60db4&lt;/p&gt;</content></entry><entry><title>how to change the docker data’s location</title><link href="/how-to-change-the-docker-datas-location" rel="alternate"></link><published>2018-12-18T12:38:00+08:00</published><updated>2018-12-18T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-18:/how-to-change-the-docker-datas-location</id><summary type="html">&lt;h2 id="steps"&gt;Steps&lt;a class="headerlink" href="#steps" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;默认情况下Docker的存放位置为：/var/lib/docker，跟系统同一个磁盘，很容易就满，而且不安全。可以考虑迁移到/home/data,步骤如下：
+1)  暂停docker服务：systemctl stop docker
+2)  数据迁移： mkdir /home/data/docker | mv /var/lib/docker /home/data/docker
+3)  建立软连接：ln -s /home/data/docker&amp;nbsp;/var/lib/docker&lt;/p&gt;
+&lt;h2 id="errors"&gt;Errors&lt;a class="headerlink" href="#errors" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;过程中可能遇到的问题：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;mv: 无法删除&amp;quot;/var/lib/docker/containers/6844f2ed7bbb9da7b232240ea980c02e25050abb04786e93bae4850a6125be90/shm …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="steps"&gt;Steps&lt;a class="headerlink" href="#steps" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;默认情况下Docker的存放位置为：/var/lib/docker，跟系统同一个磁盘，很容易就满，而且不安全。可以考虑迁移到/home/data,步骤如下：
+1)  暂停docker服务：systemctl stop docker
+2)  数据迁移： mkdir /home/data/docker | mv /var/lib/docker /home/data/docker
+3)  建立软连接：ln -s /home/data/docker&amp;nbsp;/var/lib/docker&lt;/p&gt;
+&lt;h2 id="errors"&gt;Errors&lt;a class="headerlink" href="#errors" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;过程中可能遇到的问题：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;mv: 无法删除&amp;quot;/var/lib/docker/containers/6844f2ed7bbb9da7b232240ea980c02e25050abb04786e93bae4850a6125be90/shm&amp;quot;: 设备或资源忙&lt;/span&gt;
+&lt;span class="na"&gt;mv: 无法删除&amp;quot;/var/lib/docker/containers/ff85edf195f77b5415f1089c81d7d51759e04f4875dd2b224262d189f3c50e3e/shm&amp;quot;: 设备或资源忙&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;据说是docker某版本的一个bug，可以将文件夹umount，再删除：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;umount /var/lib/docker/plugins
+umount /var/lib/docker/containers
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;然后：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv /var/lib/docker /var/lib/docker2
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;最后用 df -h&amp;nbsp;，可以看到数据已经被迁移。&lt;/p&gt;</content></entry><entry><title>How to build a blog with Pelican</title><link href="/how-to-build-a-blog-with-pelican" rel="alternate"></link><published>2018-12-17T09:12:00+08:00</published><updated>2018-12-17T09:12:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-17:/how-to-build-a-blog-with-pelican</id><summary type="html">&lt;p&gt;http://docs.getpelican.com/en/3.6.3/quickstart.html&lt;/p&gt;
+&lt;h2 id="_1"&gt;环境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set dir=%cd%
+set pythonHome=%dir%\python-tools\Python3.6.5
+set path=%path%;%pythonHome%;%pythonHome%\Scripts;%pythonHome%\Lib\site-packages\
+set projectName=ve3_pelican_github_page
+start cmd
+cd python-projects\virtualenvs
+python -m venv %projectName%
+pause
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;安装依赖包:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install pelican markdown
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="step-2"&gt;Step 2 …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;http://docs.getpelican.com/en/3.6.3/quickstart.html&lt;/p&gt;
+&lt;h2 id="_1"&gt;环境&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set dir=%cd%
+set pythonHome=%dir%\python-tools\Python3.6.5
+set path=%path%;%pythonHome%;%pythonHome%\Scripts;%pythonHome%\Lib\site-packages\
+set projectName=ve3_pelican_github_page
+start cmd
+cd python-projects\virtualenvs
+python -m venv %projectName%
+pause
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;安装依赖包:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install pelican markdown
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="step-2"&gt;Step 2&lt;a class="headerlink" href="#step-2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;创建项目&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir -p ~/projects/yoursite
+cd ~/projects/yoursite
+pelican-quickstart
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_2"&gt;&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;创建内容:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Title: My First Review
+Date: 2010-12-03 10:20
+Category: Review
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Title: My super title
+Date: 2010-12-03 10:20
+Modified: 2010-12-05 19:30
+Category: Python
+Tags: pelican, publishing
+Slug: my-super-post
+Authors: Alexis Metaireau, Conan Doyle
+Summary: Short version for index and feeds
+
+This is the content of my super blog post.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Following is a review of my favorite mechanical keyboard.
+Given that this example article is in Markdown format, save it as&amp;nbsp;~/projects/yoursite/content/keyboard-review.md.&lt;/p&gt;
+&lt;h2 id="_3"&gt;生成网站&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;verbose&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;G:\private src data\yupengyan.com&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;verbose&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_4"&gt;预览：&lt;a class="headerlink" href="#_4" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;projects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;yoursite&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;server&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="theme"&gt;Theme&lt;a class="headerlink" href="#theme" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/getpelican/pelican-themes.git
+cd pelican-themes
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install    &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;tuxlite_tbs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;pelicanconf.py    &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;THEME = &amp;#39;fresh&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="plugins"&gt;plugins&lt;a class="headerlink" href="#plugins" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;git clone &amp;#8212;recursive&amp;nbsp;https://github.com/getpelican/pelican-plugins&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;PLUGIN_PATHS = [&amp;#39;path/to/pelican-plugins&amp;#39;]
+PLUGINS = [&amp;#39;assets&amp;#39;, &amp;#39;sitemap&amp;#39;, &amp;#39;gravatar&amp;#39;]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="use-themeelegant"&gt;use theme:elegant&lt;a class="headerlink" href="#use-themeelegant" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;dependens:    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;beautifulsoup4&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;webassets&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;cssmin&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;configuration example: &lt;a href="https://github.com/Pelican-Elegant/documentation/blob/master/pelicanconf.py"&gt;pelicanconf.py&lt;/a&gt;    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="publish-to-github-page"&gt;publish to github page&lt;a class="headerlink" href="#publish-to-github-page" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;ghp&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;output&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="nd"&gt;@github.com&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;elemoine&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;elemoine&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;gh&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;ghp-import -p -b master &amp;#8220;G:/private src&amp;nbsp;data/yupengyan.com/&amp;#8221; &lt;/p&gt;
+&lt;p&gt;http://docs.getpelican.com/en/3.6.3/tips.html&lt;/p&gt;
+&lt;p&gt;http://docs.getpelican.com/en/3.6.3/quickstart.html
+http://docs.getpelican.com/en/3.6.3/content.html&amp;nbsp;https://blog.john-pfeiffer.com/how-to-set-up-a-pelican-static-blog-site/&lt;/p&gt;</content></entry><entry><title>pandas handhook</title><link href="/pandas-handhook" rel="alternate"></link><published>2018-12-03T10:20:00+08:00</published><updated>2018-12-03T10:20:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:None,2018-12-03:/pandas-handhook</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;删除含有空数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 删除含有空数据的全部行&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;4.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 可以通过axis参数来删除含有空数据的全部列&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 可以通过subset参数来删除在age和sex中含有空数据的全部行&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;age&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;sex&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;age&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;home.dest&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;GX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;FJ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;SD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;BJ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;HN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;HB …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;删除含有空数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 删除含有空数据的全部行&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;4.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 可以通过axis参数来删除含有空数据的全部列&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 可以通过subset参数来删除在age和sex中含有空数据的全部行&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;age&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;sex&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df4&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;age&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;body&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;home.dest&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;GX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;FJ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;SD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;SX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;BJ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;HN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;HB&amp;#39;&lt;/span&gt;
+   &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;AH&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;HEN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;HEN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;HLJ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;SH&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TJ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CQ&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;p1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;p2&lt;/span&gt;
+   &lt;span class="o"&gt;...&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class="n"&gt;p3&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;])&lt;/span&gt;
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="n"&gt;p1&lt;/span&gt;   &lt;span class="n"&gt;p2&lt;/span&gt;   &lt;span class="n"&gt;p3&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;   &lt;span class="n"&gt;GD&lt;/span&gt;   &lt;span class="n"&gt;GX&lt;/span&gt;   &lt;span class="n"&gt;FJ&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;   &lt;span class="n"&gt;SD&lt;/span&gt;   &lt;span class="n"&gt;SX&lt;/span&gt;   &lt;span class="n"&gt;BJ&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;   &lt;span class="n"&gt;HN&lt;/span&gt;   &lt;span class="n"&gt;HB&lt;/span&gt;   &lt;span class="n"&gt;AH&lt;/span&gt;
+&lt;span class="mi"&gt;3&lt;/span&gt;  &lt;span class="n"&gt;HEN&lt;/span&gt;  &lt;span class="n"&gt;HEN&lt;/span&gt;  &lt;span class="n"&gt;HLJ&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;   &lt;span class="n"&gt;SH&lt;/span&gt;   &lt;span class="n"&gt;TJ&lt;/span&gt;   &lt;span class="n"&gt;CQ&lt;/span&gt;
+
+
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isin&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;GD&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;HN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])]&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+   &lt;span class="n"&gt;p1&lt;/span&gt;  &lt;span class="n"&gt;p2&lt;/span&gt;  &lt;span class="n"&gt;p3&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;  &lt;span class="n"&gt;GD&lt;/span&gt;  &lt;span class="n"&gt;GX&lt;/span&gt;  &lt;span class="n"&gt;FJ&lt;/span&gt;
+&lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="n"&gt;HN&lt;/span&gt;  &lt;span class="n"&gt;HB&lt;/span&gt;  &lt;span class="n"&gt;AH&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;https://blog.csdn.net/xiaomuworld/article/details/52057804&lt;/p&gt;
+&lt;p&gt;https://blog.csdn.net/use_my_heart/article/details/52184897&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ExceQuery&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;database&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;chunksizes&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;engine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;create_engine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;database&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;chunksizes&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;df_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_sql&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;df_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_sql&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;engine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;chunksize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;chunksizes&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;df_list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sql&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;  &lt;span class="c1"&gt;# 在多线程运行后查看是哪个sql语句运行完成了，以便清楚是堵在哪个查询上了&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;%Y-%m-&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt; %H:%M:%S&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;df_list&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;python lambda&amp;nbsp;使用if&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;big&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;small&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# or&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;small&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;big&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;删除重复数据&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duplicated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;subset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;keep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;first&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其中参数解释如下：
+subset：用于识别重复的列标签或列标签序列，默认所有列标签
+keep=‘frist’：除了第一次出现外，其余相同的被标记为重复
+keep=&amp;#8217;last&amp;#8217;：除了最后一次出现外，其余相同的被标记为重复&amp;nbsp;keep=False：所有相同的都被标记为重复&lt;/p&gt;
+&lt;p&gt;例子：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#keep=&amp;#39;first&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duplicated&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="c1"&gt;#默认所有列，无重复记录&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duplicated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#第二、四、五行被标记为重复&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duplicated&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;col2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="c1"&gt;#第五行被标记为重复&lt;/span&gt;
+&lt;span class="c1"&gt;#keep=&amp;#39;last&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;duplicated&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;col1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;keep&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;last&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="c1"&gt;#第一、三、四行被标记重复&lt;/span&gt;
+ &lt;span class="sb"&gt;``&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;
+
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="err"&gt;求和&lt;/span&gt;
+ &lt;span class="sb"&gt;``&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+   &lt;span class="c1"&gt;#对列求和&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="c1"&gt;#对行求和&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;统计函数   &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#非空元素计算 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;min&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#最小值 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#最大值 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;idxmin&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#最小值的位置，类似于R中的which.min函数 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;idxmax&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#最大值的位置，类似于R中的which.max函数 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;quantile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#10%分位数 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#求和 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#均值 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;median&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#中位数 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#众数 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;var&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#方差 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#标准差 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mad&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#平均绝对偏差 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;skew&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#偏度 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;kurt&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#峰度 &lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;describe&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="c1"&gt;#一次性输出多个描述性统计指标&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;p&gt;分组统计  &lt;br /&gt;
+依托group&amp;nbsp;by,单列如：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;sex&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;通过多个列进行分组形成一个层次索引，然后执行函数：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;groupby&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;sex&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;    
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="apply-and-applymap"&gt;apply() and applymap()&lt;a class="headerlink" href="#apply-and-applymap" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;https://blog.csdn.net/qq_20412595/article/details/81131502 &lt;br /&gt;
+对DataFrame对象中的某些行或列，或者对DataFrame对象中的所有元素进行某种运算或操作，我们无需利用低效笨拙的循环，
+DataFrame给我们分别提供了相应的直接而简单的方法，apply()和applymap()。&amp;nbsp;其中apply()方法是针对某些行或列进行操作的，而applymap()方法则是针对所有元素进行操作的&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;wide petal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;petal width&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.3&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;petal area&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;petal length&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;petal width&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;applymap&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry></feed>

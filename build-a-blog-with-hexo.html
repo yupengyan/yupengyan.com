@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="安装node¶ 在Windows下，从 https://nodejs.org/en/ 下载以.msi为扩展名的安装包，如果不需要进行node相关开发的话，选LTS版本就够用了。 在Ubuntu下，可以利用nvm装node curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash # 安装nvm nvm install node # 安装最新版本node nvm ls # 查看已安装的版本 nvm use node # 使用node 安装hexo npm install -g hexo-cli npm install hexo-deployer-git --save # 安装部署站点的node功能包，hexo …
+" />
+<meta name="keywords" content=", Server, " />
+        <title>Build a blog with&nbsp;hexo  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/build-a-blog-with-hexo"> Build a blog with&nbsp;hexo  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h1 id="node">安装node<a class="headerlink" href="#node" title="Permanent link">&para;</a></h1>
+<ol>
+<li>在Windows下，从 https://nodejs.org/en/&nbsp;下载以.msi为扩展名的安装包，如果不需要进行node相关开发的话，选LTS版本就够用了。</li>
+</ol>
+<p>在Ubuntu下，可以利用nvm装node</p>
+<div class="highlight"><pre><span></span>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash # 安装nvm
+nvm install node  # 安装最新版本node
+nvm ls            # 查看已安装的版本
+nvm use node      # 使用node
+</pre></div>
+
+
+<ol>
+<li>安装hexo</li>
+</ol>
+<div class="highlight"><pre><span></span>npm install -g hexo-cli
+npm install hexo-deployer-git --save # 安装部署站点的node功能包，hexo deploy命令需要
+</pre></div>
+
+
+<ol>
+<li>建立站点仓库</li>
+</ol>
+<div class="highlight"><pre><span></span>hexo init blog # 初始化一个站点目录
+cd blog
+npm install
+</pre></div>
+
+
+<ol>
+<li>配置站点&nbsp;一般hexo初始化后的站点目录结构如下</li>
+</ol>
+<div class="highlight"><pre><span></span>/blog
+ |-- _config.yml # 站点配置文件
+ |-- scaffolds   # 页面模板存放的目录
+ |      |-- post.html # 博文模板
+ |      |-- page.html # 分页模板
+ |      \-- draft.html # 草稿模板
+ |-- source         # 博文源文件目录
+ |      |-- _posts  # 存放博文的目录
+ |      \-- _drafts # 存放草稿的目录
+ |-- themes      # 存放主题文件夹的目录
+ |-- package.json
+ |-- node_modules # 功能依赖包
+ \-- .gitignore   # push的时候忽略node_modules文件夹等
+</pre></div>
+
+
+<p>修改_config.yml文件，整个站点的配置主要是在这个文件中修改</p>
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="err">博客名</span>
+<span class="n">description</span><span class="o">:</span> <span class="err">博客简述</span>
+<span class="n">author</span><span class="o">:</span> <span class="err">作者名</span>
+<span class="n">url</span><span class="o">:</span> <span class="n">http</span><span class="o">(</span><span class="n">s</span><span class="o">)://</span><span class="n">your</span><span class="o">.</span><span class="na">site</span><span class="o">.</span><span class="na">com</span>
+<span class="n">root</span><span class="o">:</span> <span class="sr">/your/project/path or /</span>
+
+<span class="n">deploy</span><span class="o">:</span>
+  <span class="n">type</span><span class="o">:</span> <span class="n">git</span>
+  <span class="n">repo</span><span class="o">:</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="o">.</span><span class="na">com</span><span class="o">:</span><span class="n">userName</span><span class="o">/</span><span class="n">blog</span><span class="o">.</span><span class="na">git</span>
+  <span class="n">branch</span><span class="o">:</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+  <span class="n">message</span><span class="o">:</span> <span class="o">[</span><span class="err">自定义的提交信息</span><span class="o">]</span>
+</pre></div>
+
+
+<ol>
+<li>撰写博文&nbsp;每当需要撰写心得博文时，只需要执行以下命令，就可以得到一个标题和日期已经设置好的markdown文件</li>
+</ol>
+<p>hexo new [layout] &#8216;博文标题&#8217; # layout是可选项，表示使用哪种模板来创建页面文件，默认是post&nbsp;博文结构的头部</p>
+<div class="highlight"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="err">博文标题</span>
+<span class="n">date</span><span class="o">:</span> <span class="n">yyyy</span><span class="o">-</span><span class="n">mm</span><span class="o">-</span><span class="n">dd</span>  <span class="err">#</span> <span class="err">日期是创建博文源文件时自动生成的</span>
+<span class="n">categories</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">category1</span>
+<span class="o">-</span> <span class="n">category2</span>
+<span class="n">tags</span><span class="o">:</span>
+<span class="o">-</span> <span class="n">tag1</span>
+<span class="o">-</span> <span class="n">tag2</span>
+<span class="n">comments</span><span class="o">:</span> <span class="kc">true</span>
+</pre></div>
+
+
+<ol>
+<li>做好源文件的版本控制
+由于hexo是自动将站点文件自动部署到GitHub&nbsp;Pages上的，所以不需要自己另外push，但是建立生成站点页面的分支，还是有必要的。</li>
+</ol>
+<div class="highlight"><pre><span></span>git init
+git remote add origin git@github.com:userName/blog.git # 与你的github blog仓库建立联系
+git checkout --orphan source
+git push origin source
+</pre></div>
+
+
+<ol>
+<li>部署站点&nbsp;hexo的站点部署很简单</li>
+</ol>
+<div class="highlight"><pre><span></span>hexo g # 生成编译后的静态站点文件
+hexo d # 部署到远程仓库
+</pre></div>
+
+
+<p>或者可以结合起来，生成静态文件后直接部署，下面两条命令使用一条即可</p>
+<p>hexo g -d # 生成后部署
+hexo d -g #&nbsp;部署前生成</p>
+<ol>
+<li>以后每次有新的文章发布，只需要如下操作</li>
+</ol>
+<p>hexo new &#8216;博文标题&#8217;
+hexo g&nbsp;-d</p>
+<ol>
+<li>常用hexo命令</li>
+</ol>
+<div class="highlight"><pre><span></span>hexo init &lt;站点仓库的目录&gt; # 初始化一个站点目录
+hexo clean # 用于主题切换等涉及站点整体布局效果改变的行为时，清楚hexo原有缓存
+hexo new &#39;博文标题&#39; # 新增一篇博文
+hexo generate # 可简写为 hexo g ，编译生成静态页面文件
+hexo server # 可简写为 hexo s ，开启本地服务器预览与测试编译生成的静态页面效果
+hexo delpoy # 可简写为 hexo d ，部署站点到远程仓库
+hexo generate -d # 可简写为 hexo g -d ，编译生成静态页面文件并部署到远程仓库
+hexo deploy -g # 可简写为 hexo d -g ，同上
+</pre></div>
+
+
+<ol>
+<li>修改主题
+从hexo&nbsp;themes找到何意的主题，clone下来，放到站点本地仓库的themes目录下，修改_config.yml文件的theme字段为对应的主题名</li>
+</ol>
+<p>theme: light
+更多插件等功能，建议去hexo&nbsp;官网查看。</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/firewalld-handbook" title="Previous: firewalld&nbsp;handbook">firewalld&nbsp;handbook</a></li>
+ 
+                <li class="next_article"><a href="/math-for-ai" title="Next: math for <span class="caps">AI</span>">math for <span class="caps">AI</span></a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2019-01-17T09:31:00+08:00">1月 17, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Server-ref">Server</a> 
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="检测连接：¶ netstat -nt | grep your_server_ip | awk '{print $5}' | awk -F":" '{print $1}'| sort | uniq -c | sort -r -n 比如： [root@Haproxy jsb]# netstat -nt | grep 202.116.48.23:80 | awk '{print $5}' | awk -F":" '{print $1}'| sort | uniq -c | sort -r -n 27 172.28.48.22 22 172 …
+" />
+<meta name="keywords" content="haproxy, safe, Server, Server, " />
+        <title>web server&nbsp;protect  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/web-server-protect"> web server&nbsp;protect  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="_1">检测连接：<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span>netstat -nt | grep your_server_ip | awk &#39;{print $5}&#39; | awk -F&quot;:&quot; &#39;{print $1}&#39;| sort | uniq -c | sort -r -n
+</pre></div>
+
+
+<p>比如：</p>
+<div class="highlight"><pre><span></span>[root@Haproxy jsb]# netstat -nt | grep 202.116.48.23:80 | awk &#39;{print $5}&#39; | awk -F&quot;:&quot; &#39;{print $1}&#39;| sort | uniq -c | sort -r -n
+27 172.28.48.22
+22 172.28.48.89
+9 42.236.99.206
+9 42.236.54.2
+8 42.236.99.72
+8 220.243.136.188
+7 220.243.136.62
+7 220.243.135.125
+6 42.236.99.86
+6 42.236.99.194
+6 42.236.54.22
+6 220.243.136.251
+6 220.243.135.62
+6 220.243.135.251
+5 42.236.99.79
+5 42.236.99.166
+5 220.243.136.125
+5 220.243.135.155
+5 220.243.135.104
+4 42.236.99.44
+4 42.236.54.62
+4 42.236.46.85
+4 42.236.102.23
+4 220.243.136.29
+4 220.243.135.92
+4 220.243.135.29
+4 117.122.222.180
+3 42.236.99.16
+3 42.236.99.130
+3 42.236.12.150
+3 42.236.12.130
+3 42.236.103.66
+3 220.243.136.78
+3 220.243.136.41
+3 220.243.136.15
+3 220.243.135.44
+3 220.243.135.41
+3 220.243.135.218
+3 220.243.135.204
+3 220.243.135.167
+3 220.243.135.162
+3 139.217.198.91
+2 42.236.99.65
+2 42.236.99.30
+2 42.236.102.3
+2 42.236.101.214
+2 220.243.136.218
+2 220.243.136.170
+2 220.243.136.104
+2 220.243.135.230
+2 220.243.135.188
+2 139.217.199.91
+2 139.217.199.33
+1 61.151.178.197
+1 54.223.119.62
+1 52.83.254.182
+1 52.83.219.14
+1 52.81.11.30
+1 50.35.31.142
+1 42.236.99.2
+1 42.236.99.154
+1 42.236.99.142
+1 42.236.12.190
+1 42.236.10.89
+1 42.236.10.71
+1 42.236.101.234
+1 220.243.136.92
+1 220.243.136.80
+1 220.243.136.4
+1 220.243.136.233
+1 220.243.136.230
+1 220.243.136.225
+1 220.243.136.204
+1 220.243.136.17
+1 220.243.136.162
+1 220.243.136.155
+1 220.243.136.141
+1 220.243.136.130
+1 220.243.135.99
+1 220.243.135.67
+1 220.243.135.233
+1 220.243.135.184
+1 220.243.135.164
+1 220.243.135.15
+1 220.243.135.143
+1 220.243.135.107
+1 14.16.108.88
+1 139.219.1.232
+1 139.217.197.212
+1 139.217.197.175
+1 139.217.196.231
+1 13.66.139.0
+1 125.88.223.58
+</pre></div>
+
+
+<p>220.243.135.0&nbsp;这类规律性的IP可能就是爬虫了&#8230;可以用Haprox等web应用服务器block,也可以用防火墙block，当然也有可能是搜索引擎，block前搞清楚。</p>
+<h2 id="_2">处理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>放入防火墙拒绝   </li>
+</ol>
+<div class="highlight"><pre><span></span>firewall-cmd --permanent --add-rich-rule=&quot;rule family=&#39;ipv4&#39; source address=&#39;180.76.15/24&#39; reject&quot;
+firewall-cmd --reload
+</pre></div>
+
+
+<ol>
+<li>放入haproxy黑名单 <br />
+haproxy.cfg frontend&nbsp;放入：  </li>
+</ol>
+<div class="highlight"><pre><span></span>    <span class="c1"># Black list ######</span>
+    <span class="na">acl bad_ip src -f /usr/local/etc/haproxy/block-ip.txt</span>
+    <span class="na">tcp-request connection reject if bad_ip</span>
+</pre></div>
+
+
+<p>block-ip.txt&nbsp;放入ip地址：   </p>
+<div class="highlight"><pre><span></span><span class="na">220.243.135.0/24</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>[root@localhost docker_haproxy]# vi block-ip.txt
+180.163.228.0/24
+180.163.227.0/24
+180.163.226.0/24
+180.163.225.0/24
+42.236.99.0/24
+42.236.10.0/24
+</pre></div>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/docker-errors" title="Previous: docker&nbsp;errors">docker&nbsp;errors</a></li>
+ 
+                <li class="next_article"><a href="/mongodb-handbook" title="Next: mongodb&nbsp;handbook">mongodb&nbsp;handbook</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2019-01-17T09:31:00+08:00">1月 17, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Server-ref">Server</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#haproxy-ref">haproxy
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#safe-ref">safe
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#Server-ref">Server
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

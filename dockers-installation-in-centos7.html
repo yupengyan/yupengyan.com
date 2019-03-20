@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="install Docker¶ yum remove docker \ docker-client \ docker-client-latest \ docker-common \ docker-latest \ docker-latest-logrotate \ docker-logrotate \ docker-selinux \ docker-engine-selinux \ docker-engine curl -sSL https://get.docker.com/ | sh yum install -y docker-compose $ curl -fsSL get.docker.com -o get-docker.sh $ sudo sh get-docker.sh --mirror Aliyun /etc/systemd/system/containerd.service.d [Unit] Description=Docker Application Container …
+" />
+<meta name="keywords" content=", Review, " />
+        <title>docker&#8217;s installation in&nbsp;CentOS7  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/dockers-installation-in-centos7"> docker&#8217;s installation in&nbsp;CentOS7  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="install-docker">install Docker<a class="headerlink" href="#install-docker" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span>yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+
+
+curl -sSL https://get.docker.com/ | sh
+yum install -y docker-compose
+
+
+$ curl -fsSL get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh --mirror Aliyun
+</pre></div>
+
+
+<p>/etc/systemd/system/containerd.service.d</p>
+<div class="highlight"><pre><span></span><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Docker Application Container Engine</span>
+<span class="na">Documentation</span><span class="o">=</span><span class="s">https://docs.docker.com</span>
+<span class="na">BindsTo</span><span class="o">=</span><span class="s">containerd.service</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network-online.target firewalld.service</span>
+<span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
+
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">notify</span>
+<span class="c1"># the default is not to use systemd for cgroups because the delegate issues still</span>
+<span class="c1"># exists and systemd currently does not support the cgroup feature set required</span>
+<span class="c1"># for containers run by docker</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/dockerd -H unix://</span>
+<span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -s HUP $MAINPID</span>
+<span class="na">TimeoutSec</span><span class="o">=</span><span class="s">0</span>
+<span class="na">RestartSec</span><span class="o">=</span><span class="s">2</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+
+<span class="c1"># Note that StartLimit* options were moved from &quot;Service&quot; to &quot;Unit&quot; in systemd 229.</span>
+<span class="c1"># Both the old, and new location are accepted by systemd 229 and up, so using the old location</span>
+<span class="c1"># to make them work for either version of systemd.</span>
+<span class="na">StartLimitBurst</span><span class="o">=</span><span class="s">3</span>
+
+<span class="c1"># Note that StartLimitInterval was renamed to StartLimitIntervalSec in systemd 230.</span>
+<span class="c1"># Both the old, and new name are accepted by systemd 230 and up, so using the old name to make</span>
+<span class="c1"># this option work for either version of systemd.</span>
+<span class="na">StartLimitInterval</span><span class="o">=</span><span class="s">60s</span>
+
+<span class="c1"># Having non-zero Limit*s causes performance problems due to accounting overhead</span>
+<span class="c1"># in the kernel. We recommend using cgroups to do container-local accounting.</span>
+<span class="na">LimitNOFILE</span><span class="o">=</span><span class="s">infinity</span>
+<span class="na">LimitNPROC</span><span class="o">=</span><span class="s">infinity</span>
+<span class="na">LimitCORE</span><span class="o">=</span><span class="s">infinity</span>
+
+<span class="c1"># Comment TasksMax if your systemd version does not supports it.</span>
+<span class="c1"># Only systemd 226 and above support this option.</span>
+<span class="na">TasksMax</span><span class="o">=</span><span class="s">infinity</span>
+
+<span class="c1"># set delegate yes so that systemd does not reset the cgroups of docker containers</span>
+<span class="na">Delegate</span><span class="o">=</span><span class="s">yes</span>
+
+<span class="c1"># kill only the docker process, not all processes in the cgroup</span>
+<span class="na">KillMode</span><span class="o">=</span><span class="s">process</span>
+</pre></div>
+
+
+<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
+<p>docker: Error response from daemon: <span class="caps">OCI</span> runtime create failed: unable to retrieve <span class="caps">OCI</span> runtime error (open /run/docker/containerd/daemon/io.containerd.runtime.v1.linux/moby/e2b1c3db53f33b6027eb4f644429aeb1eee4b0096d7f76686f7ce88f12019062/log.json: no such file or directory): runc did not terminate sucessfully:&nbsp;unknown.</p>
+<p>I have the same problem. Installing an older docker-ce should&nbsp;work.</p>
+<p>cat /etc/centos-release
+CentOS Linux release 7.1.1503&nbsp;(Core) </p>
+<p>yum install docker-ce-17.06.1.ce
+systemctl start docker
+docker pull&nbsp;nginx</p>
+<p>[root@Haproxy docker-haproxy-certbot]# cat /etc/centos-release
+CentOS Linux release 7.6.1810 (Core) 
+[root@Haproxy docker-haproxy-certbot]# docker -v
+Docker version 18.09.0, build&nbsp;4d60db4</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/how-to-change-the-docker-datas-location" title="Previous: how to change the docker data&#8217;s&nbsp;location">how to change the docker data&#8217;s&nbsp;location</a></li>
+ 
+                <li class="next_article"><a href="/docker-handbook" title="Next: docker&nbsp;handbook">docker&nbsp;handbook</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2018-12-18T12:38:00+08:00">12月 18, 2018</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Review-ref">Review</a> 
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

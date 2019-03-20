@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="Steps¶ 默认情况下Docker的存放位置为：/var/lib/docker，跟系统同一个磁盘，很容易就满，而且不安全。可以考虑迁移到/home/data,步骤如下： 1) 暂停docker服务：systemctl stop docker 2) 数据迁移： mkdir /home/data/docker | mv /var/lib/docker /home/data/docker 3) 建立软连接：ln -s /home/data/docker /var/lib/docker Errors¶ 过程中可能遇到的问题： mv: 无法删除"/var/lib/docker/containers/6844f2ed7bbb9da7b232240ea980c02e25050abb04786e93bae4850a6125be90/shm …
+" />
+<meta name="keywords" content=", Server, " />
+        <title>how to change the docker data&#8217;s&nbsp;location  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/how-to-change-the-docker-datas-location"> how to change the docker data&#8217;s&nbsp;location  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<p>默认情况下Docker的存放位置为：/var/lib/docker，跟系统同一个磁盘，很容易就满，而且不安全。可以考虑迁移到/home/data,步骤如下：
+1)  暂停docker服务：systemctl stop docker
+2)  数据迁移： mkdir /home/data/docker | mv /var/lib/docker /home/data/docker
+3)  建立软连接：ln -s /home/data/docker&nbsp;/var/lib/docker</p>
+<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
+<p>过程中可能遇到的问题：</p>
+<div class="highlight"><pre><span></span><span class="na">mv: 无法删除&quot;/var/lib/docker/containers/6844f2ed7bbb9da7b232240ea980c02e25050abb04786e93bae4850a6125be90/shm&quot;: 设备或资源忙</span>
+<span class="na">mv: 无法删除&quot;/var/lib/docker/containers/ff85edf195f77b5415f1089c81d7d51759e04f4875dd2b224262d189f3c50e3e/shm&quot;: 设备或资源忙</span>
+</pre></div>
+
+
+<p>据说是docker某版本的一个bug，可以将文件夹umount，再删除：</p>
+<div class="highlight"><pre><span></span>umount /var/lib/docker/plugins
+umount /var/lib/docker/containers
+</pre></div>
+
+
+<p>然后：</p>
+<div class="highlight"><pre><span></span>mv /var/lib/docker /var/lib/docker2
+</pre></div>
+
+
+<p>最后用 df -h&nbsp;，可以看到数据已经被迁移。</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/how-to-build-a-blog-with-pelican" title="Previous: How to build a blog with&nbsp;Pelican">How to build a blog with&nbsp;Pelican</a></li>
+ 
+                <li class="next_article"><a href="/dockers-installation-in-centos7" title="Next: docker&#8217;s installation in&nbsp;CentOS7">docker&#8217;s installation in&nbsp;CentOS7</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2018-12-18T12:38:00+08:00">12月 18, 2018</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Server-ref">Server</a> 
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

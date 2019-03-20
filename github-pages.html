@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="Set up a Custom domain¶ DNS: Add an A record point to github server. 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153 Go to your repo setting. Rename your repositry name to :example.com Setting -> Github pages -> Custom domain -> example.com Add …
+" />
+<meta name="keywords" content="github pages, Server, Server, " />
+        <title>github&nbsp;pages  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/github-pages"> github&nbsp;pages  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="set-up-a-custom-domain">Set up a Custom domain<a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link">&para;</a></h2>
+<ol>
+<li><span class="caps">DNS</span>: Add an A record point to github&nbsp;server.    </li>
+</ol>
+<div class="highlight"><pre><span></span>185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+</pre></div>
+
+
+<p><img alt="gh-pages-dns-records" src="/images/gh-pages-dns-records.jpg" /></p>
+<ol>
+<li>
+<p>Go to your repo&nbsp;setting.      </p>
+<ol>
+<li>Rename your repositry name to :example.com <br />
+<img alt="gh-pages-repo-name" src="/images/gh-pages-repo-name.jpg" /></li>
+<li>Setting -&gt; Github pages -&gt; Custom domain -&gt; example.com  <br />
+<img alt="gh-pages-custom-domain" src="/images/gh-pages-custom-domain.jpg" /></li>
+</ol>
+</li>
+<li>
+<p>Add a <span class="caps">CNAME</span> file in your&nbsp;repositry.    </p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span>examle.com
+</pre></div>
+
+
+<p><img alt="gh-pages-CNAME" src="/images/gh-pages-CNAME.jpg" /></p>
+<p>That&#8217;s&nbsp;it!</p>
+<h2 id="faq"><span class="caps">FAQ</span>:<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<p>Q: <span class="caps">CNAME</span> already taken, what should I&nbsp;do?</p>
+<p>A: Ask github for help! They are very nice.Go to see more <a href="https://help.github.com/en/articles/troubleshooting-custom-domains#cname-already-taken">detail</a>.</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/markdown-guide" title="Previous: markdown&nbsp;guide">markdown&nbsp;guide</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2019-03-14T08:56:00+08:00">3月 14, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Server-ref">Server</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#github-pages-ref">github pages
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#Server-ref">Server
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

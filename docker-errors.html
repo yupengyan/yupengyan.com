@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="Build the image:¶ Host mapping “/home/data/dv_haproxy” has no effect¶ https://111qqz.com/2018/11/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%9C%A8-docker-compose-%E4%B8%AD%E4%BD%BF%E7%94%A8volume%E7%9A%84%E8%B8%A9%E5%9D%91%E8%AE%B0%E5 …
+" />
+<meta name="keywords" content=", Server, " />
+        <title>docker&nbsp;errors  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/docker-errors"> docker&nbsp;errors  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="build-the-image">Build the image:<a class="headerlink" href="#build-the-image" title="Permanent link">&para;</a></h2>
+<h3 id="host-mapping-homedatadv_haproxy-has-no-effect">Host mapping &#8220;/home/data/dv_haproxy&#8221; has no effect<a class="headerlink" href="#host-mapping-homedatadv_haproxy-has-no-effect" title="Permanent link">&para;</a></h3>
+<p>https://111qqz.com/2018/11/%E8%<span class="caps">AE</span>%B0%E4%B8%80%E6%<span class="caps">AC</span>%A1%E5%9C%A8-docker-compose-%E4%B8%<span class="caps">AD</span>%E4%<span class="caps">BD</span>%<span class="caps">BF</span>%E7%94%A8volume%E7%9A%84%E8%B8%A9%E5%9D%91%E8%<span class="caps">AE</span>%B0%E5%<span class="caps">BD</span>%95/</p>
+<div class="highlight"><pre><span></span><span class="na">docker-compose.yml中定义的volumes无效：</span>
+
+
+<span class="na">WARNING: Service &quot;https&quot; is using volume &quot;/var/spool/cron/cronstamps&quot; from the previous container. Host mapping &quot;/home/data/dv_haproxy&quot; has no effect. Remove the existing containers (with `docker-compose rm https`) to use the host volume mapping.</span>
+</pre></div>
+
+
+<p>解决方案：
+1.不手动创建volume，而是在docker-compose.yml中，设置volume的mountpoint
+2.在docker-compose.yml中，添加external: true的选项到 volume中，参考external&nbsp;https://docs.docker.com/compose/compose-file/#external</p>
+<div class="highlight"><pre><span></span><span class="na">version: &#39;3&#39;</span>
+<span class="na">services:</span>
+  <span class="na">django:</span>
+    <span class="na">image: &quot;registry.sensetime.com/spider/sensespider:v1.0&quot;</span>
+    <span class="na">volumes:</span>
+      <span class="na">- spiderdata:/data</span>
+    <span class="na">privileged: true </span>
+    <span class="na">ports:</span>
+      <span class="na">- &quot;8000:8000&quot;</span>
+    <span class="na">working_dir: /home/renkuanze/workspace/sensespider</span>
+    <span class="na">entrypoint: bash run.sh</span>
+    <span class="na">tty: true</span>
+    <span class="na">container_name: django</span>
+
+  <span class="na">splash: </span>
+    <span class="na">image: &quot;scrapinghub/splash&quot;</span>
+    <span class="na">container_name: splash</span>
+    <span class="na">network_mode: &quot;service:django&quot;</span>
+<span class="na">volumes:</span>
+  <span class="na">spiderdata:</span>
+    <span class="na">driver: local-persist</span>
+    <span class="na">driver_opts:</span>
+      <span class="na">mountpoint: /data/spider_data</span>
+</pre></div>
+
+
+<p>[root@localhost gitlab]# docker restart gitlab
+Error response from daemon: Cannot restart container gitlab: oci runtime error: container with id exists:&nbsp;ff85edf195f77b5415f1089c81d7d51759e04f4875dd2b224262d189f3c50e3e</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/docker-handbook" title="Previous: docker&nbsp;handbook">docker&nbsp;handbook</a></li>
+ 
+                <li class="next_article"><a href="/web-server-protect" title="Next: web server&nbsp;protect">web server&nbsp;protect</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2018-12-18T12:38:00+08:00">12月 18, 2018</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Server-ref">Server</a> 
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

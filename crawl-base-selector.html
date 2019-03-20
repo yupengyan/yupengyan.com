@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="CSS 选择器参考手册¶ 选择器 例子 例子描述 CSS .class .intro 选择 class=”intro” 的所有元素。 1 #id #firstname 选择 id=”firstname” 的所有元素。 1 * * 选择所有元素。 2 element p 选择所有 元素。 1 element,element div,p 选择所有 元素和所有 元素。 1 element element div p 选择 元素内部的所有 元素。 1 element>element div>p 选择父元素为 元素的所有 元素 …
+" />
+<meta name="keywords" content=", Review, " />
+        <title>crawl base:&nbsp;selector  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/crawl-base-selector"> crawl base:&nbsp;selector  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2 id="css"><span class="caps">CSS</span> 选择器参考手册<a class="headerlink" href="#css" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>例子</th>
+<th>例子描述</th>
+<th><span class="caps">CSS</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.class</td>
+<td>.intro</td>
+<td>选择 class=&#8221;intro&#8221; 的所有元素。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#id</td>
+<td>#firstname</td>
+<td>选择 id=&#8221;firstname&#8221; 的所有元素。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>*</td>
+<td>*</td>
+<td>选择所有元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element</td>
+<td>p</td>
+<td>选择所有 <p> 元素。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>element,element</td>
+<td>div,p</td>
+<td>选择所有 <div> 元素和所有 <p> 元素。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>element element</td>
+<td>div p</td>
+<td>选择 <div> 元素内部的所有 <p> 元素。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>element&gt;element</td>
+<td>div&gt;p</td>
+<td>选择父元素为 <div> 元素的所有 <p> 元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element+element</td>
+<td>div+p</td>
+<td>选择紧接在 <div> 元素之后的所有 <p> 元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute]</td>
+<td>[target]</td>
+<td>选择带有 target 属性所有元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute=value]</td>
+<td>[target=_blank]</td>
+<td>选择 target=&#8221;_blank&#8221; 的所有元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute~=value]</td>
+<td>[title~=flower]</td>
+<td>选择 title 属性包含单词 &#8220;flower&#8221; 的所有元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attribute=value]</td>
+<td>[lang=en]</td>
+<td>选择 lang 属性值以 &#8220;en&#8221; 开头的所有元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:link</td>
+<td>a:link</td>
+<td>选择所有未被访问的链接。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>a:visited</td>
+<td>选择所有已被访问的链接。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:active</td>
+<td>a:active</td>
+<td>选择活动链接。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>a:hover</td>
+<td>选择鼠标指针位于其上的链接。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>input:focus</td>
+<td>选择获得焦点的 input 元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:first-letter</td>
+<td>p:first-letter</td>
+<td>选择每个 <p> 元素的首字母。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:first-line</td>
+<td>p:first-line</td>
+<td>选择每个 <p> 元素的首行。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>p:first-child</td>
+<td>选择属于父元素的第一个子元素的每个 <p> 元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:before</td>
+<td>p:before</td>
+<td>在每个 <p> 元素的内容之前插入内容。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:after</td>
+<td>p:after</td>
+<td>在每个 <p> 元素的内容之后插入内容。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:lang(language)</td>
+<td>p:lang(it)</td>
+<td>选择带有以 &#8220;it&#8221; 开头的 lang 属性值的每个 <p> 元素。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element1~element2</td>
+<td>p~ul</td>
+<td>选择前面有 <p> 元素的每个 <ul> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attribute^=value]</td>
+<td>a[src^=&#8221;https&#8221;]</td>
+<td>选择其 src 属性值以 &#8220;https&#8221; 开头的每个 <a> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attribute$=value]</td>
+<td>a[src$=&#8221;.pdf&#8221;]</td>
+<td>选择其 src 属性以 &#8220;.pdf&#8221; 结尾的所有 <a> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attribute*=value]</td>
+<td>a[src*=&#8221;abc&#8221;]</td>
+<td>选择其 src 属性中包含 &#8220;abc&#8221; 子串的每个 <a> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>p:first-of-type</td>
+<td>选择属于其父元素的首个 <p> 元素的每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>p:last-of-type</td>
+<td>选择属于其父元素的最后 <p> 元素的每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-of-type</td>
+<td>p:only-of-type</td>
+<td>选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>p:only-child</td>
+<td>选择属于其父元素的唯一子元素的每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-child(n)</td>
+<td>p:nth-child(2)</td>
+<td>选择属于其父元素的第二个子元素的每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-child(n)</td>
+<td>p:nth-last-child(2)</td>
+<td>同上，从最后一个子元素开始计数。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-of-type(n)</td>
+<td>p:nth-of-type(2)</td>
+<td>选择属于其父元素第二个 <p> 元素的每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-of-type(n)</td>
+<td>p:nth-last-of-type(2)</td>
+<td>同上，但是从最后一个子元素开始计数。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>p:last-child</td>
+<td>选择属于其父元素最后一个子元素每个 <p> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:root</td>
+<td>:root</td>
+<td>选择文档的根元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>p:empty</td>
+<td>选择没有子元素的每个 <p> 元素（包括文本节点）。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:target</td>
+<td>#news:target</td>
+<td>选择当前活动的 #news 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>input:enabled</td>
+<td>选择每个启用的 <input> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>input:disabled</td>
+<td>选择每个禁用的 <input> 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>input:checked</td>
+<td>选择每个被选中的 <input> 元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:not(selector)</td>
+<td>:not(p)</td>
+<td>选择非 <p> 元素的每个元素。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>::selection</td>
+<td>选择被用户选取的元素部分。</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>参考：
+http://www.w3school.com.cn/cssref/css_selectors.<span class="caps">ASP</span></p>
+<p>exceltk, 转换excel表格到markdown, 下载：&nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/git-handbook" title="Previous: git&nbsp;handbook">git&nbsp;handbook</a></li>
+ 
+                <li class="next_article"><a href="/crawl-base-pyppeteer-handbook" title="Next: crawl base: pyppeteer&nbsp;handbook">crawl base: pyppeteer&nbsp;handbook</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2019-02-28T00:00:00+08:00">2月 28, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Review-ref">Review</a> 
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>
