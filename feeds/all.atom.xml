@@ -535,7 +535,7 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 &lt;/table&gt;
 &lt;p&gt;参考：
 http://www.w3school.com.cn/cssref/css_selectors.&lt;span class="caps"&gt;ASP&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>git handbook</title><link href="https://yupengyan.com/git-handbook" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/git-handbook</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>Git handbook:using Git in a team</title><link href="https://yupengyan.com/git-handbookusing-git-in-a-team" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/git-handbookusing-git-in-a-team</id><summary type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Git windows&amp;nbsp;客户端安装&lt;/li&gt;
 &lt;/ol&gt;
@@ -547,13 +547,13 @@ http://www.w3school.com.cn/cssref/css_selectors.&lt;span class="caps"&gt;ASP&lt;
 &lt;p&gt;合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。&lt;/p&gt;
 &lt;h2 id="_3"&gt;合作者&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Git global setup
-git config --global user.name &amp;quot;py&amp;quot;
-git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
+git config --global user.name &amp;quot;yupengyan&amp;quot;
+git config --global user.email &amp;quot;ypy@example.com&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Create a new&amp;nbsp;repository&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@gitlab.library.gdufe.edu.cn …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@gitlab.library.gdufe.edu.cn:pengyan …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;前期准备&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Git windows&amp;nbsp;客户端安装&lt;/li&gt;
 &lt;/ol&gt;
@@ -565,8 +565,8 @@ git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
 &lt;p&gt;合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。&lt;/p&gt;
 &lt;h2 id="_3"&gt;合作者&lt;a class="headerlink" href="#_3" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Git global setup
-git config --global user.name &amp;quot;py&amp;quot;
-git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
+git config --global user.name &amp;quot;yupengyan&amp;quot;
+git config --global user.email &amp;quot;ypy@example.com&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -692,13 +692,15 @@ git merge xzl
 git push -u origin develop
 &lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>github quick start</title><link href="https://yupengyan.com/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
-Get started by creating a new file or uploading an existing file. We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
+Get started by creating a new file or uploading an existing file. 
+We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
-Get started by creating a new file or uploading an existing file. We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
+Get started by creating a new file or uploading an existing file. 
+We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
 &lt;/blockquote&gt;

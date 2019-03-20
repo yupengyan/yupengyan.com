@@ -6,10 +6,10 @@
         <meta name="author" content="Joe Yu" />
         <meta name="copyright" content="Joe Yu" />
 
-        <meta name="description" content="Quick setup — if you’ve done this kind of thing before¶ https://github.com/yupengyan/ve3_scrapy.git Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore. or create a new repository on the command line echo "# ve3_scrapy …
+        <meta name="description" content="前期准备¶ Git windows 客户端安装 管理者¶ 新建一个develop分支（from master）http://172.19.13.51:8929/ 为合作者新建一个合作者分支，如cjj 合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。 合作者¶ Git global setup git config --global user.name "yupengyan" git config --global user.email "ypy@example.com" Create a new repository git clone git@gitlab.library.gdufe.edu.cn:pengyan …
 " />
 <meta name="keywords" content=", Server, " />
-        <title>github quick&nbsp;start  · Yu's Blog
+        <title>Git handbook:using Git in a&nbsp;team  · Yu's Blog
 </title>
         <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
         <link rel="stylesheet" type="text/css" href="https://yupengyan.com/theme/css/slim-081711.css">
@@ -55,49 +55,159 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="https://yupengyan.com/github-quick-start"> github quick&nbsp;start  </a></h1>
+    <h1><a href="https://yupengyan.com/git-handbookusing-git-in-a-team"> Git handbook:using Git in a&nbsp;team  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <h2 id="quick-setup-if-youve-done-this-kind-of-thing-before">Quick setup — if you’ve done this kind of thing before<a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link">&para;</a></h2>
-<p>https://github.com/yupengyan/ve3_scrapy.git  <br />
-Get started by creating a new file or uploading an existing file. 
-We recommend every repository include a <span class="caps">README</span>, <span class="caps">LICENSE</span>, and&nbsp;.gitignore.</p>
-<blockquote>
-<p>or create a new repository on the command&nbsp;line</p>
-</blockquote>
-<div class="highlight"><pre><span></span>echo &quot;# ve3_scrapy&quot; &gt;&gt; README.md
-git init
+            <h2 id="_1">前期准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Git windows&nbsp;客户端安装</li>
+</ol>
+<h2 id="_2">管理者<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>新建一个develop分支（from&nbsp;master）http://172.19.13.51:8929/</li>
+<li>为合作者新建一个合作者分支，如cjj</li>
+</ol>
+<p>合作者在合作者分支上面修改代码，合并到develop，然后提交到Git服务器。</p>
+<h2 id="_3">合作者<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span>Git global setup
+git config --global user.name &quot;yupengyan&quot;
+git config --global user.email &quot;ypy@example.com&quot;
+</pre></div>
+
+
+<p>Create a new&nbsp;repository</p>
+<div class="highlight"><pre><span></span>git clone git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+cd ve3_smartkits
+touch README.md
 git add README.md
-git commit -m &quot;first commit&quot;
-git remote add origin https://github.com/yupengyan/ve3_scrapy.git
+git commit -m &quot;add README&quot;
 git push -u origin master
 </pre></div>
 
 
-<blockquote>
-<p>or push an existing repository from the command&nbsp;line</p>
-</blockquote>
+<p>Existing&nbsp;folder</p>
+<div class="highlight"><pre><span></span>cd existing_folder
+git init
+git remote add origin git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
+git add .
+git commit -m &quot;Initial commit&quot;
+git push -u origin master
+</pre></div>
+
+
+<p>Existing Git&nbsp;repository</p>
 <div class="highlight"><pre><span></span>cd existing_repo
 git remote rename origin old-origin
-git remote add origin https://github.com/yupengyan/ve3_scrapy.git
-git push -u origin master
-or 
+git remote add origin git@gitlab.library.gdufe.edu.cn:pengyan/ve3_smartkits.git
 git push -u origin --all
-or 
 git push -u origin --tags
+</pre></div>
+
+
+<p>以项目 http://172.19.13.51:8929/pengyan/dl_documents 合作为例：
+1. 安装Git <br />
+2. Git global&nbsp;setup     </p>
+<div class="highlight"><pre><span></span>git config --global user.name &quot;py&quot;
+git config --global user.email &quot;ypy@gdufe.edu.cn&quot;
+</pre></div>
+
+
+<p>对于需要用Key认证的，先配置。In ~/.ssh/config, add:&nbsp;(如果不是默认22，指定Port很重要)</p>
+<div class="highlight"><pre><span></span>host gitlab.library.gdufe.edu.cn
+  HostName 172.19.13.51
+  Port 2289
+  IdentityFile  E:/OneDrive/privates/#keys/Identity-gitlib-openssh
+  User pengyan
+host git-2
+  HostName 172.19.13.51
+  Port 2289
+  IdentityFile  E:/OneDrive/privates/#keys/Identity-gitlib-openssh
+  User pengyan
+</pre></div>
+
+
+<ol>
+<li>Create a new&nbsp;repository    </li>
+</ol>
+<div class="highlight"><pre><span></span>cd my_work_place
+git clone git@gitlab.library.gdufe.edu.cn:pengyan/dl_documents.git
+cd dl_documents
+</pre></div>
+
+
+<h2 id="_4">常用操作<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li>查看有什么分支    </li>
+</ol>
+<div class="highlight"><pre><span></span>git branch
+</pre></div>
+
+
+<ol>
+<li>这个命令的意思就是拉取远程的一个叫develop的分支，并在本地创建一个叫develop的分支和远程的分支匹配。    </li>
+</ol>
+<div class="highlight"><pre><span></span>git fetch origin develop:develop
+</pre></div>
+
+
+<ol>
+<li>拉取自己的分支    </li>
+</ol>
+<div class="highlight"><pre><span></span>git fetch origin xzl:xzl
+</pre></div>
+
+
+<ol>
+<li>每个人的所有开发工作都只在自己的分支开发。例如小谢开发，你就在本地切换到自己的xzl分支然后进行开发。   </li>
+</ol>
+<div class="highlight"><pre><span></span>git checkout xzl
+</pre></div>
+
+
+<ol>
+<li>每个人只允许在自己的分支直接push远程分支。    </li>
+</ol>
+<div class="highlight"><pre><span></span>touch README.md
+git add README.md
+git commit -m &quot;add README&quot;
+git push -u origin xzl
+</pre></div>
+
+
+<h2 id="_5">合并的时候必须遵循以下条件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>a)&nbsp;首先，本地切换到develop分支    </p>
+<div class="highlight"><pre><span></span>git checkout develop
+</pre></div>
+
+
+<p>b) pull&nbsp;develop分支最新内容到本地      </p>
+<div class="highlight"><pre><span></span>git pull origin develop   
+</pre></div>
+
+
+<p>c)&nbsp;保证develop最新前提下合并自己的分支xzl   </p>
+<div class="highlight"><pre><span></span>git merge xzl
+</pre></div>
+
+
+<p>d) 如果出现conflict那么清除conflict之后，commit.然后把本地develop push&nbsp;到远程的develop.每完成一个功能就提交一次。不要累计代码。    </p>
+<div class="highlight"><pre><span></span>git add README.md
+git commit -m &quot;add README&quot;
+git merge xzl
+git push -u origin develop
 </pre></div>
             <aside>
             <hr/>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="https://yupengyan.com/math-for-ai" title="Previous: math for <span class="caps">AI</span>">math for <span class="caps">AI</span></a></li>
+                <li class="previous_article">« <a href="https://yupengyan.com/github-quick-start" title="Previous: github quick&nbsp;start">github quick&nbsp;start</a></li>
  
-                <li class="next_article"><a href="https://yupengyan.com/git-handbookusing-git-in-a-team" title="Next: Git handbook:using Git in a&nbsp;team">Git handbook:using Git in a&nbsp;team</a> »</li>
+                <li class="next_article"><a href="https://yupengyan.com/crawl-base-selector" title="Next: crawl base:&nbsp;selector">crawl base:&nbsp;selector</a> »</li>
             </ul>
             </nav>
             </aside>
