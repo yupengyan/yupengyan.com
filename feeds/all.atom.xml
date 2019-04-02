@@ -535,16 +535,18 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 &lt;/table&gt;
 &lt;p&gt;参考：
 http://www.w3school.com.cn/cssref/css_selectors.&lt;span class="caps"&gt;ASP&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>github quick start</title><link href="https://yupengyan.com/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
-Get started by creating a new file or uploading an existing file. 
+&lt;p&gt;exceltk, 转换excel表格到markdown, 下载：&amp;nbsp;http://files.cnblogs.com/files/math/exceltk.0.1.3.zip&lt;/p&gt;</content></entry><entry><title>github quick start</title><link href="https://yupengyan.com/github-quick-start" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/github-quick-start</id><summary type="html">&lt;h2 id="quick-setup"&gt;Quick setup&lt;a class="headerlink" href="#quick-setup" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Get started by creating a new file or uploading an existing file. 
 We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="quick-setup-if-youve-done-this-kind-of-thing-before"&gt;Quick setup — if you’ve done this kind of thing before&lt;a class="headerlink" href="#quick-setup-if-youve-done-this-kind-of-thing-before" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;https://github.com/yupengyan/ve3_scrapy.git  &lt;br /&gt;
-Get started by creating a new file or uploading an existing file. 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;echo &amp;quot;# ve3_scrapy&amp;quot; &amp;gt;&amp;gt; README.md
+git init
+git add README.md
+git commit -m &amp;quot;first commit&amp;quot;
+git remote …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="quick-setup"&gt;Quick setup&lt;a class="headerlink" href="#quick-setup" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Get started by creating a new file or uploading an existing file. 
 We recommend every repository include a &lt;span class="caps"&gt;README&lt;/span&gt;, &lt;span class="caps"&gt;LICENSE&lt;/span&gt;, and&amp;nbsp;.gitignore.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;or create a new repository on the command&amp;nbsp;line&lt;/p&gt;
@@ -572,11 +574,11 @@ git push -u origin --tags
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h2 id="how-to-protect-your-private-email"&gt;how to protect your private email&lt;a class="headerlink" href="#how-to-protect-your-private-email" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="how-to-protect-your-private-email"&gt;How to protect your private email&lt;a class="headerlink" href="#how-to-protect-your-private-email" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Go to &lt;a href="https://github.com/settings/emails"&gt;email setting&amp;nbsp;page&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;Check the box: Keep my email address private, and you will see your noreply email address here , like &lt;span class="caps"&gt;ID&lt;/span&gt;+username@users.noreply.github.com    &lt;/li&gt;
-&lt;li&gt;Uncheck  the box:Block command line pushes that expose my&amp;nbsp;email   &lt;/li&gt;
+&lt;li&gt;Choose to: Keep my email address private, and you will see your noreply email address here , like &lt;span class="caps"&gt;ID&lt;/span&gt;+username@users.noreply.github.com    &lt;/li&gt;
+&lt;li&gt;Unchoose: Block command line pushes that expose my&amp;nbsp;email    &lt;/li&gt;
 &lt;li&gt;Set your email in git&amp;nbsp;clinet:   &lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global user.email &amp;quot;ID+username@users.noreply.github.com&amp;quot;
