@@ -569,7 +569,24 @@ or
 git push -u origin --all
 or 
 git push -u origin --tags
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>math for AI</title><link href="https://yupengyan.com/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="how-to-protect-your-private-email"&gt;how to protect your private email&lt;a class="headerlink" href="#how-to-protect-your-private-email" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;a href="https://github.com/settings/emails"&gt;email setting&amp;nbsp;page&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;Check the box: Keep my email address private, and you will see your noreply email address here , like &lt;span class="caps"&gt;ID&lt;/span&gt;+username@users.noreply.github.com    &lt;/li&gt;
+&lt;li&gt;Uncheck  the box:Block command line pushes that expose my&amp;nbsp;email   &lt;/li&gt;
+&lt;li&gt;Set your email in git&amp;nbsp;clinet:   &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global user.email &amp;quot;ID+username@users.noreply.github.com&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reference: 
+1. https://github.blog/2017-04-11-private-emails-now-more-private/ 
+2.&amp;nbsp;https://help.github.com/en/articles/about-commit-email-addresses&lt;/p&gt;
+&lt;h2 id="why-my-co"&gt;Why my co&lt;a class="headerlink" href="#why-my-co" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;</content></entry><entry><title>math for AI</title><link href="https://yupengyan.com/math-for-ai" rel="alternate"></link><published>2019-02-22T12:38:00+08:00</published><updated>2019-02-22T12:38:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-22:/math-for-ai</id><summary type="html">&lt;h2 id="ai"&gt;AI基石&lt;a class="headerlink" href="#ai" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;第1章 高等数学&lt;br /&gt;
 1.1 导数和偏导数&lt;br /&gt;
 1.2 梯度向量  &lt;br /&gt;
@@ -749,7 +766,7 @@ git config --global user.email &amp;quot;ypy@gdufe.edu.cn&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;对于需要用Key认证的，先配置。In ~/.ssh/config, add:&amp;nbsp;(如果不是默认22，指定Port很重要)&lt;/p&gt;
+&lt;p&gt;对于需要用Key认证的，先配置。In ~/.ssh/config, add: (如果不是默认22，指定Port很重要)(windows in&amp;nbsp;C:\Users\xxx.git)&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;host gitlab.library.gdufe.edu.cn
   HostName 172.19.13.51
   Port 2289
