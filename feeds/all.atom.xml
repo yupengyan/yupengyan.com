@@ -1,5 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Yu's Blog</title><link href="https://yupengyan.com/" rel="alternate"></link><link href="https://yupengyan.com/feeds/all.atom.xml" rel="self"></link><id>https://yupengyan.com/</id><updated>2019-03-14T08:56:00+08:00</updated><entry><title>github pages</title><link href="https://yupengyan.com/github-pages" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-03-14:/github-pages</id><summary type="html">&lt;h2 id="set-up-a-custom-domain"&gt;Set up a Custom domain&lt;a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Yu's Blog</title><link href="https://yupengyan.com/" rel="alternate"></link><link href="https://yupengyan.com/feeds/all.atom.xml" rel="self"></link><id>https://yupengyan.com/</id><updated>2019-04-03T00:00:00+08:00</updated><entry><title>centos7 increase disk</title><link href="https://yupengyan.com/centos7-increase-disk" rel="alternate"></link><published>2019-04-03T00:00:00+08:00</published><updated>2019-04-03T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-04-03:/centos7-increase-disk</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;查看可用磁盘  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]# df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   50G   15G   36G   30% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;ol&gt;
+&lt;li&gt;查看可用磁盘  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]# df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   50G   15G   36G   30% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3.9G    0% /sys/fs/cgroup
+/dev/sda1                497M  119M  379M   24% /boot
+/dev/mapper/centos-home   42G  1.0G   41G    3% /home
+tmpfs                    783M   28K  783M    1% /run/user/0
+tmpfs                    783M     0  783M    0% /run/user/1001
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;列出磁盘设备          &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]# fdisk -l
+
+磁盘 /dev/sdb：161.1 GB, 161061273600 字节，314572800 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+
+磁盘 /dev/sda：107.4 GB, 107374182400 字节，209715200 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+磁盘标签类型：dos
+磁盘标识符：0x0000861e
+
+   设备 Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     1026047      512000   83  Linux
+/dev/sda2         1026048   209715199   104344576   8e  Linux LVM
+
+磁盘 /dev/mapper/centos-swap：8472 MB, 8472494080 字节，16547840 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+
+磁盘 /dev/mapper/centos-root：53.7 GB, 53687091200 字节，104857600 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+
+
+磁盘 /dev/mapper/centos-home：44.7 GB, 44686114816 字节，87277568 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;创建物理卷      &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;新磁盘名字为：/dev/sdb&amp;nbsp;，運行下面的命令來創建新的物理卷，然後增加到卷組&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# pvcreate /dev/sdb
+# vgextend centos /dev/sdb
+# vgdisplay
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;运行效果：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]# pvcreate /dev/sdb
+  Physical volume &amp;quot;/dev/sdb&amp;quot; successfully created.
+[root@Haproxy jsb]# vgextend centos /dev/sdb
+  Volume group &amp;quot;centos&amp;quot; successfully extended
+[root@Haproxy jsb]# vgdisplay
+  --- Volume group ---
+  VG Name               centos
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  6
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                3
+  Open LV               3
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               249.50 GiB
+  PE Size               4.00 MiB
+  Total PE              63873
+  Alloc PE / Size       25474 / &amp;lt;99.51 GiB
+  Free  PE / Size       38399 / &amp;lt;150.00 GiB
+  VG UUID               ZWmToh-w6AW-5CSB-e9mR-NBCL-X2T8-hpOvcz
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;将物理卷添加到逻辑卷   &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;現在根據此磁盤的空間大小來擴展邏輯卷，然後添加到根分區。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# lvextend -L +20G /dev/mapper/centos-root
+# xfs_growfs /dev/mapper/centos-root
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;运行效果：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]#  lvextend -L +160G /dev/mapper/centos-home
+  Insufficient free space: 40960 extents needed, but only 38399 available
+[root@Haproxy jsb]#  lvextend -L +150G /dev/mapper/centos-home
+  Insufficient free space: 38400 extents needed, but only 38399 available
+[root@Haproxy jsb]#  lvextend -L +100G /dev/mapper/centos-home
+  Size of logical volume centos/home changed from &amp;lt;41.62 GiB (10654 extents) to &amp;lt;141.62 GiB (36254 extents).
+  Logical volume centos/home successfully resized.
+[root@Haproxy jsb]# xfs_growfs /dev/mapper/centos-home
+meta-data=/dev/mapper/centos-home isize=256    agcount=4, agsize=2727424 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0 spinodes=0
+data     =                       bsize=4096   blocks=10909696, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+log      =internal               bsize=4096   blocks=5327, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 10909696 to 37124096
+[root@Haproxy jsb]# df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   50G   15G   36G   30% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3.9G    0% /sys/fs/cgroup
+/dev/sda1                497M  119M  379M   24% /boot
+/dev/mapper/centos-home  142G  1.0G  141G    1% /home
+tmpfs                    783M   32K  783M    1% /run/user/0
+tmpfs                    783M     0  783M    0% /run/user/1001
+[root@Haproxy jsb]# lvextend -L +160G /dev/mapper/centos-roo
+  Logical volume roo not found in volume group centos.
+[root@Haproxy jsb]# lvextend -L +160G /dev/mapper/centos-root
+  Insufficient free space: 40960 extents needed, but only 12799 available
+[root@Haproxy jsb]# lvextend -L +40G /dev/mapper/centos-root
+  Size of logical volume centos/root changed from 50.00 GiB (12800 extents) to 90.00 GiB (23040 extents).
+  Logical volume centos/root successfully resized.
+[root@Haproxy jsb]# xfs_growfs /dev/mapper/centos-root
+meta-data=/dev/mapper/centos-root isize=256    agcount=4, agsize=3276800 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0 spinodes=0
+data     =                       bsize=4096   blocks=13107200, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+log      =internal               bsize=4096   blocks=6400, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 13107200 to 23592960
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;检验效果 &lt;br /&gt;&amp;nbsp;查看新的磁盘大小，然后重启&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[root@Haproxy jsb]#  df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   90G   15G   76G   17% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3.9G    0% /sys/fs/cgroup
+/dev/sda1                497M  119M  379M   24% /boot
+/dev/mapper/centos-home  142G  1.0G  141G    1% /home
+tmpfs                    783M   32K  783M    1% /run/user/0
+tmpfs                    783M     0  783M    0% /run/user/1001
+[root@Haproxy jsb]# shutdown -r 0
+Shutdown scheduled for 三 2019-04-03 15:33:54 CST, use &amp;#39;shutdown -c&amp;#39; to cancel.
+[root@Haproxy jsb]# 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reference:https://kknews.cc/zh-hk/other/6k66m.html&lt;/p&gt;</content><category term="linux"></category><category term="disk"></category><category term="Server"></category></entry><entry><title>github pages</title><link href="https://yupengyan.com/github-pages" rel="alternate"></link><published>2019-03-14T08:56:00+08:00</published><updated>2019-03-14T08:56:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-03-14:/github-pages</id><summary type="html">&lt;h2 id="set-up-a-custom-domain"&gt;Set up a Custom domain&lt;a class="headerlink" href="#set-up-a-custom-domain" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt;: Add an A record point to github&amp;nbsp;server.    &lt;/li&gt;
 &lt;/ol&gt;
@@ -126,38 +310,65 @@ eat: it was a [hobbit-hole][1], and that means comfort.
 &lt;p&gt;Way 3:Quick&amp;nbsp;links&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;https:&lt;/span&gt;&lt;span class="err"&gt;//&lt;/span&gt;&lt;span class="na"&gt;www&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;markdownguide&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;fake&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="na"&gt;example&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;com&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>crawl base: pyppeteer handbook</title><link href="https://yupengyan.com/crawl-base-pyppeteer-handbook" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-28:/crawl-base-pyppeteer-handbook</id><summary type="html">&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>crawl base: pyppeteer handbook</title><link href="https://yupengyan.com/crawl-base-pyppeteer-handbook" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-28:/crawl-base-pyppeteer-handbook</id><summary type="html">&lt;h2 id="_1"&gt;首次运行&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[W:pyppeteer.chromium_downloader] start chromium download.
+Download may take a few minutes.
+100%|██████████| 133194757/133194757 [01:02&amp;lt;00:00, 2124775.82it/s]
+[W:pyppeteer.chromium_downloader] 
+chromium download done.
+[W:pyppeteer.chromium_downloader] chromium extracted to: C:\Users\pengyan\AppData\Local\pyppeteer\pyppeteer\local-chromium\575458
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="_2"&gt;错误&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;运行JS脚本：&lt;/li&gt;
+&lt;li&gt;失去浏览器联系   &lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;dimensions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
-&lt;span class="s1"&gt;        return {&lt;/span&gt;
-&lt;span class="s1"&gt;            width: document.documentElement.clientWidth,&lt;/span&gt;
-&lt;span class="s1"&gt;            height: document.documentElement.clientHeight,&lt;/span&gt;
-&lt;span class="s1"&gt;            deviceScaleFactor: window.devicePixelRatio,&lt;/span&gt;
-&lt;span class="s1"&gt;        }&lt;/span&gt;
-&lt;span class="s1"&gt;    }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;错误 Protocol Error (Runtime …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="_1"&gt;首次运行&lt;a class="headerlink" href="#_1" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[W:pyppeteer.chromium_downloader] start chromium download.
+Download may take a few minutes.
+100%|██████████| 133194757/133194757 [01:02&amp;lt;00:00, 2124775.82it/s]
+[W:pyppeteer.chromium_downloader] 
+chromium download done.
+[W:pyppeteer.chromium_downloader] chromium extracted to: C:\Users\pengyan\AppData\Local\pyppeteer\pyppeteer\local-chromium\575458
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;结果：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# &amp;gt;&amp;gt;&amp;gt; {&amp;#39;width&amp;#39;: 800, &amp;#39;height&amp;#39;: 600, &amp;#39;deviceScaleFactor&amp;#39;: 1}
+&lt;h2 id="_2"&gt;错误&lt;a class="headerlink" href="#_2" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;失去浏览器联系   &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;错误 Protocol Error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+
+Traceback (most recent call last):
+  File &amp;quot;Z:/dev/python-projects/virtualenvs/ve3_xxqg/src/xxqg_pyppeteer.v2.py&amp;quot;, line 254, in &amp;lt;module&amp;gt;
+    asyncio.get_event_loop().run_until_complete(xxqg.main())
+  File &amp;quot;Z:\dev\python-tools\Python3.6.5\lib\asyncio\base_events.py&amp;quot;, line 468, in run_until_complete
+    return future.result()
+  File &amp;quot;Z:/dev/python-projects/virtualenvs/ve3_xxqg/src/xxqg_pyppeteer.v2.py&amp;quot;, line 240, in main
+    await self.do_video_task(cookies, counter=counter , waitTime=30 )
+  File &amp;quot;Z:/dev/python-projects/virtualenvs/ve3_xxqg/src/xxqg_pyppeteer.v2.py&amp;quot;, line 148, in do_video_task
+    browser = await launch({&amp;#39;headless&amp;#39;: False, &amp;#39;args&amp;#39;: [&amp;#39;--no-sandbox&amp;#39;], &amp;#39;timeout&amp;#39;: 0, &amp;#39;userDataDir&amp;#39;: self.userDataDir})
+  File &amp;quot;Z:\dev\python-projects\virtualenvs\ve3_xxqg\lib\site-packages\pyppeteer\launcher.py&amp;quot;, line 311, in launch
+    return await Launcher(options, **kwargs).launch()
+  File &amp;quot;Z:\dev\python-projects\virtualenvs\ve3_xxqg\lib\site-packages\pyppeteer\launcher.py&amp;quot;, line 189, in launch
+    self.browserWSEndpoint = self._get_ws_endpoint()
+  File &amp;quot;Z:\dev\python-projects\virtualenvs\ve3_xxqg\lib\site-packages\pyppeteer\launcher.py&amp;quot;, line 233, in _get_ws_endpoint
+    self.proc.stdout.read().decode()
+UnicodeDecodeError: &amp;#39;utf-8&amp;#39; codec can&amp;#39;t decode byte 0xd2 in position 429: invalid continuation byte
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;举一反三：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;text_point_today&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&amp;#39;() =&amp;gt; {&lt;/span&gt;
-&lt;span class="s1"&gt;            return document.getElementsByClassName(&amp;quot;buttonbox&amp;quot;)[0].textContent&lt;/span&gt;
-&lt;span class="s1"&gt;        }&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;p&gt;=&amp;gt;解决：https://github.com/miyakogi/pyppeteer/pull/160/files&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pyppeteer/connection.py 44行
+
+            self._url, max_size=None, loop=self._loop)
+            =&amp;gt;
+            self._url, max_size=None, loop=self._loop, ping_interval=None, ping_timeout=None)
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;完整Example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;asyncio&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyppeteer&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;launch&lt;/span&gt;
-
-&lt;span class="n"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;launch …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="js"&gt;&lt;span class="caps"&gt;JS&lt;/span&gt; 操作&lt;a class="headerlink" href="#js" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;运行JS脚本：&lt;/li&gt;
 &lt;/ol&gt;
@@ -206,6 +417,32 @@ eat: it was a [hobbit-hole][1], and that means comfort.
     &lt;span class="n"&gt;await&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="n"&gt;asyncio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_event_loop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run_until_complete&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="chrome-and-docker"&gt;Chrome and docker&lt;a class="headerlink" href="#chrome-and-docker" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;https://github.com/karma-runner/karma-chrome-launcher/issues/189&amp;nbsp;Dockerfile&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;FROM node:11.0-alpine
+
+# Installs latest Chromium package
+RUN apk update &amp;amp;&amp;amp; apk upgrade &amp;amp;&amp;amp; \
+    echo @edge http://nl.alpinelinux.org/alpine/edge/community &amp;gt;&amp;gt; /etc/apk/repositories &amp;amp;&amp;amp; \
+    echo @edge http://nl.alpinelinux.org/alpine/edge/main &amp;gt;&amp;gt; /etc/apk/repositories &amp;amp;&amp;amp; \
+    apk add --no-cache bash chromium@edge nss@edge
+
+# This line is to tell karma-chrome-launcher where
+# chromium was downloaded and installed to.
+ENV CHROME_BIN /usr/bin/chromium-browser
+
+# Tell Puppeteer to skip installing Chrome.
+# We&amp;#39;ll be using the installed package instead.
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+
+# Telling node-sass which pre-built binary to fetch.
+# This way we don&amp;#39;t need rebuilding node-sass each time!
+ENV SASS_BINARY_NAME=linux-x64-67
+
+# ...
 &lt;/pre&gt;&lt;/div&gt;</content><category term="crawl"></category><category term="pyppeteer"></category><category term="Review"></category></entry><entry><title>crawl base: selector</title><link href="https://yupengyan.com/crawl-base-selector" rel="alternate"></link><published>2019-02-28T00:00:00+08:00</published><updated>2019-02-28T00:00:00+08:00</updated><author><name>Joe Yu</name></author><id>tag:yupengyan.com,2019-02-28:/crawl-base-selector</id><summary type="html">&lt;h2 id="css"&gt;&lt;span class="caps"&gt;CSS&lt;/span&gt; 选择器参考手册&lt;a class="headerlink" href="#css" title="Permanent link"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joe Yu" />
+        <meta name="copyright" content="Joe Yu" />
+
+        <meta name="description" content="查看可用磁盘 [root@Haproxy jsb]# df -h 文件系统 容量 已用 可用 已用% 挂载点 /dev/mapper/centos-root 50G 15G 36G 30% / devtmpfs 3.9G 0 3.9G 0% /dev tmpfs 3.9G 96K 3.9G 1% /dev/shm tmpfs 3.9G 9.0M 3.9G 1% /run tmpfs 3.9G 0 3 …
+" />
+<meta name="keywords" content="linux, disk, Server, Server, " />
+        <title>centos7 increase&nbsp;disk  · Yu's Blog
+</title>
+        <!-- link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css" -->
+        <link rel="stylesheet" type="text/css" href="https://yupengyan.com/theme/css/slim-081711.css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://yupengyan.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://yupengyan.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="https://yupengyan.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="https://yupengyan.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://yupengyan.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="https://yupengyan.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://yupengyan.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://yupengyan.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="https://yupengyan.com/theme/images/apple-touch-icon-144x144.png" />
+        <link href="https://yupengyan.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog - Full Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="https://yupengyan.com/"><span class=site-name>Yu's Blog</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="https://yupengyan.com">Home</a></li>
+                            <li ><a href="https://yupengyan.com/categories.html">Categories</a></li>
+                            <li ><a href="https://yupengyan.com/tags.html">Tags</a></li>
+                            <li ><a href="https://yupengyan.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="https://yupengyan.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="https://yupengyan.com/centos7-increase-disk"> centos7 increase&nbsp;disk  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <ol>
+<li>查看可用磁盘  </li>
+</ol>
+<div class="highlight"><pre><span></span>[root@Haproxy jsb]# df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   50G   15G   36G   30% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3.9G    0% /sys/fs/cgroup
+/dev/sda1                497M  119M  379M   24% /boot
+/dev/mapper/centos-home   42G  1.0G   41G    3% /home
+tmpfs                    783M   28K  783M    1% /run/user/0
+tmpfs                    783M     0  783M    0% /run/user/1001
+</pre></div>
+
+
+<ol>
+<li>列出磁盘设备          </li>
+</ol>
+<div class="highlight"><pre><span></span>[root@Haproxy jsb]# fdisk -l
+
+磁盘 /dev/sdb：161.1 GB, 161061273600 字节，314572800 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+
+磁盘 /dev/sda：107.4 GB, 107374182400 字节，209715200 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+磁盘标签类型：dos
+磁盘标识符：0x0000861e
+
+   设备 Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        2048     1026047      512000   83  Linux
+/dev/sda2         1026048   209715199   104344576   8e  Linux LVM
+
+磁盘 /dev/mapper/centos-swap：8472 MB, 8472494080 字节，16547840 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+
+磁盘 /dev/mapper/centos-root：53.7 GB, 53687091200 字节，104857600 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+
+
+磁盘 /dev/mapper/centos-home：44.7 GB, 44686114816 字节，87277568 个扇区
+Units = 扇区 of 1 * 512 = 512 bytes
+扇区大小(逻辑/物理)：512 字节 / 512 字节
+I/O 大小(最小/最佳)：512 字节 / 512 字节
+</pre></div>
+
+
+<ol>
+<li>创建物理卷      </li>
+</ol>
+<p>新磁盘名字为：/dev/sdb&nbsp;，運行下面的命令來創建新的物理卷，然後增加到卷組</p>
+<div class="highlight"><pre><span></span># pvcreate /dev/sdb
+# vgextend centos /dev/sdb
+# vgdisplay
+</pre></div>
+
+
+<p>运行效果：</p>
+<div class="highlight"><pre><span></span>[root@Haproxy jsb]# pvcreate /dev/sdb
+  Physical volume &quot;/dev/sdb&quot; successfully created.
+[root@Haproxy jsb]# vgextend centos /dev/sdb
+  Volume group &quot;centos&quot; successfully extended
+[root@Haproxy jsb]# vgdisplay
+  --- Volume group ---
+  VG Name               centos
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  6
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                3
+  Open LV               3
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               249.50 GiB
+  PE Size               4.00 MiB
+  Total PE              63873
+  Alloc PE / Size       25474 / &lt;99.51 GiB
+  Free  PE / Size       38399 / &lt;150.00 GiB
+  VG UUID               ZWmToh-w6AW-5CSB-e9mR-NBCL-X2T8-hpOvcz
+</pre></div>
+
+
+<ol>
+<li>将物理卷添加到逻辑卷   </li>
+</ol>
+<p>現在根據此磁盤的空間大小來擴展邏輯卷，然後添加到根分區。</p>
+<div class="highlight"><pre><span></span># lvextend -L +20G /dev/mapper/centos-root
+# xfs_growfs /dev/mapper/centos-root
+</pre></div>
+
+
+<p>运行效果：</p>
+<div class="highlight"><pre><span></span>[root@Haproxy jsb]#  lvextend -L +160G /dev/mapper/centos-home
+  Insufficient free space: 40960 extents needed, but only 38399 available
+[root@Haproxy jsb]#  lvextend -L +150G /dev/mapper/centos-home
+  Insufficient free space: 38400 extents needed, but only 38399 available
+[root@Haproxy jsb]#  lvextend -L +100G /dev/mapper/centos-home
+  Size of logical volume centos/home changed from &lt;41.62 GiB (10654 extents) to &lt;141.62 GiB (36254 extents).
+  Logical volume centos/home successfully resized.
+[root@Haproxy jsb]# xfs_growfs /dev/mapper/centos-home
+meta-data=/dev/mapper/centos-home isize=256    agcount=4, agsize=2727424 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0 spinodes=0
+data     =                       bsize=4096   blocks=10909696, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+log      =internal               bsize=4096   blocks=5327, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 10909696 to 37124096
+[root@Haproxy jsb]# df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   50G   15G   36G   30% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3.9G    0% /sys/fs/cgroup
+/dev/sda1                497M  119M  379M   24% /boot
+/dev/mapper/centos-home  142G  1.0G  141G    1% /home
+tmpfs                    783M   32K  783M    1% /run/user/0
+tmpfs                    783M     0  783M    0% /run/user/1001
+[root@Haproxy jsb]# lvextend -L +160G /dev/mapper/centos-roo
+  Logical volume roo not found in volume group centos.
+[root@Haproxy jsb]# lvextend -L +160G /dev/mapper/centos-root
+  Insufficient free space: 40960 extents needed, but only 12799 available
+[root@Haproxy jsb]# lvextend -L +40G /dev/mapper/centos-root
+  Size of logical volume centos/root changed from 50.00 GiB (12800 extents) to 90.00 GiB (23040 extents).
+  Logical volume centos/root successfully resized.
+[root@Haproxy jsb]# xfs_growfs /dev/mapper/centos-root
+meta-data=/dev/mapper/centos-root isize=256    agcount=4, agsize=3276800 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0 spinodes=0
+data     =                       bsize=4096   blocks=13107200, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
+log      =internal               bsize=4096   blocks=6400, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 13107200 to 23592960
+</pre></div>
+
+
+<ol>
+<li>检验效果 <br />&nbsp;查看新的磁盘大小，然后重启</li>
+</ol>
+<div class="highlight"><pre><span></span>[root@Haproxy jsb]#  df -h
+文件系统                 容量  已用  可用 已用% 挂载点
+/dev/mapper/centos-root   90G   15G   76G   17% /
+devtmpfs                 3.9G     0  3.9G    0% /dev
+tmpfs                    3.9G   96K  3.9G    1% /dev/shm
+tmpfs                    3.9G  9.0M  3.9G    1% /run
+tmpfs                    3.9G     0  3.9G    0% /sys/fs/cgroup
+/dev/sda1                497M  119M  379M   24% /boot
+/dev/mapper/centos-home  142G  1.0G  141G    1% /home
+tmpfs                    783M   32K  783M    1% /run/user/0
+tmpfs                    783M     0  783M    0% /run/user/1001
+[root@Haproxy jsb]# shutdown -r 0
+Shutdown scheduled for 三 2019-04-03 15:33:54 CST, use &#39;shutdown -c&#39; to cancel.
+[root@Haproxy jsb]# 
+</pre></div>
+
+
+<p>Reference:https://kknews.cc/zh-hk/other/6k66m.html</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="https://yupengyan.com/github-pages" title="Previous: github&nbsp;pages">github&nbsp;pages</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2019-04-03T00:00:00+08:00">4月 3, 2019</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Server-ref">Server</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#disk-ref">disk
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#linux-ref">linux
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#Server-ref">Server
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Elegant theme documentation is licensed under a <a rel="license" 
+    href="http://creativecommons.org/licenses/by/4.0/">
+    Creative Commons Attribution 4.0 International License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

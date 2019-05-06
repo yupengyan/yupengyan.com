@@ -6,7 +6,7 @@
         <meta name="author" content="Joe Yu" />
         <meta name="copyright" content="Joe Yu" />
 
-        <meta name="description" content="JS 操作¶ 运行JS脚本： dimensions = await page.evaluate('''() => { return { width: document.documentElement.clientWidth, height: document.documentElement.clientHeight, deviceScaleFactor: window.devicePixelRatio, } }''') 结果： # >>> {'width': 800, 'height': 600, 'deviceScaleFactor': 1} 举一反三： text_point_today = await page.evaluate('''() => { return document.getElementsByClassName("buttonbox")[0].textContent }''') 完整Example: import asyncio from pyppeteer import launch async def main(): browser = await launch …
+        <meta name="description" content="首次运行¶ [W:pyppeteer.chromium_downloader] start chromium download. Download may take a few minutes. 100%|██████████| 133194757/133194757 [01:02<00:00, 2124775.82it/s] [W:pyppeteer.chromium_downloader] chromium download done. [W:pyppeteer.chromium_downloader] chromium extracted to: C:\Users\pengyan\AppData\Local\pyppeteer\pyppeteer\local-chromium\575458 错误¶ 失去浏览器联系 错误 Protocol Error (Runtime …
 " />
 <meta name="keywords" content="crawl, pyppeteer, Review, Review, " />
         <title>crawl base: pyppeteer&nbsp;handbook  · Yu's Blog
@@ -62,7 +62,51 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <h2 id="js"><span class="caps">JS</span> 操作<a class="headerlink" href="#js" title="Permanent link">&para;</a></h2>
+            <h2 id="_1">首次运行<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span>[W:pyppeteer.chromium_downloader] start chromium download.
+Download may take a few minutes.
+100%|██████████| 133194757/133194757 [01:02&lt;00:00, 2124775.82it/s]
+[W:pyppeteer.chromium_downloader] 
+chromium download done.
+[W:pyppeteer.chromium_downloader] chromium extracted to: C:\Users\pengyan\AppData\Local\pyppeteer\pyppeteer\local-chromium\575458
+</pre></div>
+
+
+<h2 id="_2">错误<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>失去浏览器联系   </li>
+</ol>
+<div class="highlight"><pre><span></span>错误 Protocol Error (Runtime.callFunctionOn): Session closed. Most likely the page has been closed.
+
+Traceback (most recent call last):
+  File &quot;Z:/dev/python-projects/virtualenvs/ve3_xxqg/src/xxqg_pyppeteer.v2.py&quot;, line 254, in &lt;module&gt;
+    asyncio.get_event_loop().run_until_complete(xxqg.main())
+  File &quot;Z:\dev\python-tools\Python3.6.5\lib\asyncio\base_events.py&quot;, line 468, in run_until_complete
+    return future.result()
+  File &quot;Z:/dev/python-projects/virtualenvs/ve3_xxqg/src/xxqg_pyppeteer.v2.py&quot;, line 240, in main
+    await self.do_video_task(cookies, counter=counter , waitTime=30 )
+  File &quot;Z:/dev/python-projects/virtualenvs/ve3_xxqg/src/xxqg_pyppeteer.v2.py&quot;, line 148, in do_video_task
+    browser = await launch({&#39;headless&#39;: False, &#39;args&#39;: [&#39;--no-sandbox&#39;], &#39;timeout&#39;: 0, &#39;userDataDir&#39;: self.userDataDir})
+  File &quot;Z:\dev\python-projects\virtualenvs\ve3_xxqg\lib\site-packages\pyppeteer\launcher.py&quot;, line 311, in launch
+    return await Launcher(options, **kwargs).launch()
+  File &quot;Z:\dev\python-projects\virtualenvs\ve3_xxqg\lib\site-packages\pyppeteer\launcher.py&quot;, line 189, in launch
+    self.browserWSEndpoint = self._get_ws_endpoint()
+  File &quot;Z:\dev\python-projects\virtualenvs\ve3_xxqg\lib\site-packages\pyppeteer\launcher.py&quot;, line 233, in _get_ws_endpoint
+    self.proc.stdout.read().decode()
+UnicodeDecodeError: &#39;utf-8&#39; codec can&#39;t decode byte 0xd2 in position 429: invalid continuation byte
+</pre></div>
+
+
+<p>=&gt;解决：https://github.com/miyakogi/pyppeteer/pull/160/files</p>
+<div class="highlight"><pre><span></span>pyppeteer/connection.py 44行
+
+            self._url, max_size=None, loop=self._loop)
+            =&gt;
+            self._url, max_size=None, loop=self._loop, ping_interval=None, ping_timeout=None)
+</pre></div>
+
+
+<h2 id="js"><span class="caps">JS</span> 操作<a class="headerlink" href="#js" title="Permanent link">&para;</a></h2>
 <ol>
 <li>运行JS脚本：</li>
 </ol>
@@ -111,6 +155,32 @@
     <span class="n">await</span> <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+
+
+<h2 id="chrome-and-docker">Chrome and docker<a class="headerlink" href="#chrome-and-docker" title="Permanent link">&para;</a></h2>
+<p>https://github.com/karma-runner/karma-chrome-launcher/issues/189&nbsp;Dockerfile</p>
+<div class="highlight"><pre><span></span>FROM node:11.0-alpine
+
+# Installs latest Chromium package
+RUN apk update &amp;&amp; apk upgrade &amp;&amp; \
+    echo @edge http://nl.alpinelinux.org/alpine/edge/community &gt;&gt; /etc/apk/repositories &amp;&amp; \
+    echo @edge http://nl.alpinelinux.org/alpine/edge/main &gt;&gt; /etc/apk/repositories &amp;&amp; \
+    apk add --no-cache bash chromium@edge nss@edge
+
+# This line is to tell karma-chrome-launcher where
+# chromium was downloaded and installed to.
+ENV CHROME_BIN /usr/bin/chromium-browser
+
+# Tell Puppeteer to skip installing Chrome.
+# We&#39;ll be using the installed package instead.
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+
+# Telling node-sass which pre-built binary to fetch.
+# This way we don&#39;t need rebuilding node-sass each time!
+ENV SASS_BINARY_NAME=linux-x64-67
+
+# ...
 </pre></div>
             <aside>
             <hr/>
